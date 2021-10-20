@@ -211,6 +211,7 @@ namespace Projeto_Facul
             // 
             // TBoxNomeCadFunc
             // 
+            this.TBoxNomeCadFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TBoxNomeCadFunc.Location = new System.Drawing.Point(161, 101);
             this.TBoxNomeCadFunc.Name = "TBoxNomeCadFunc";
             this.TBoxNomeCadFunc.Size = new System.Drawing.Size(237, 20);
@@ -245,6 +246,7 @@ namespace Projeto_Facul
             // 
             this.TBoxSenhaCadFunc.Location = new System.Drawing.Point(462, 227);
             this.TBoxSenhaCadFunc.Name = "TBoxSenhaCadFunc";
+            this.TBoxSenhaCadFunc.PasswordChar = '*';
             this.TBoxSenhaCadFunc.Size = new System.Drawing.Size(147, 20);
             this.TBoxSenhaCadFunc.TabIndex = 34;
             // 
