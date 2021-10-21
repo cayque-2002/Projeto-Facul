@@ -124,7 +124,7 @@ namespace Projeto_Facul
             this.bunifuFBtnProg.IconVisible = true;
             this.bunifuFBtnProg.IconZoom = 90D;
             this.bunifuFBtnProg.IsTab = false;
-            this.bunifuFBtnProg.Location = new System.Drawing.Point(0, 200);
+            this.bunifuFBtnProg.Location = new System.Drawing.Point(0, 209);
             this.bunifuFBtnProg.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFBtnProg.Name = "bunifuFBtnProg";
             this.bunifuFBtnProg.Normalcolor = System.Drawing.Color.Transparent;
@@ -160,7 +160,7 @@ namespace Projeto_Facul
             this.bunifuFBtnFunc.IconVisible = true;
             this.bunifuFBtnFunc.IconZoom = 90D;
             this.bunifuFBtnFunc.IsTab = false;
-            this.bunifuFBtnFunc.Location = new System.Drawing.Point(0, 64);
+            this.bunifuFBtnFunc.Location = new System.Drawing.Point(0, 80);
             this.bunifuFBtnFunc.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFBtnFunc.Name = "bunifuFBtnFunc";
             this.bunifuFBtnFunc.Normalcolor = System.Drawing.Color.Transparent;
@@ -187,7 +187,7 @@ namespace Projeto_Facul
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FRMAdministrativo";
             this.Text = "AGGE - Administrativo";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FRMAdministrativo_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRMAdministrativo_FormClosing);
             this.Load += new System.EventHandler(this.FRMAdministrativo_Load);
             this.panel1.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);

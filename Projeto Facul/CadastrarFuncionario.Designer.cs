@@ -53,6 +53,7 @@ namespace Projeto_Facul
             this.lbLoginFunc = new System.Windows.Forms.Label();
             this.lbSexoFunc = new System.Windows.Forms.Label();
             this.CBoxSexoCadFunc = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LbPerfil
@@ -292,6 +293,16 @@ namespace Projeto_Facul
             this.CBoxSexoCadFunc.Size = new System.Drawing.Size(121, 21);
             this.CBoxSexoCadFunc.TabIndex = 44;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(668, 223);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CadastrarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,6 +310,7 @@ namespace Projeto_Facul
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbSexoFunc);
             this.Controls.Add(this.CBoxSexoCadFunc);
             this.Controls.Add(this.LbPerfil);
@@ -356,5 +368,6 @@ namespace Projeto_Facul
         private System.Windows.Forms.Label lbLoginFunc;
         private System.Windows.Forms.Label lbSexoFunc;
         private System.Windows.Forms.ComboBox CBoxSexoCadFunc;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -21,14 +21,17 @@ namespace Projeto_Facul
         private void resetMe()
         {
             this.id = string.Empty;
-
+            
+           
             TBoxNomeCadFunc.Text = "";
             TBoxRGCadFunc.Text = "";
             MTBoxCPFCadFunc.Text =  "";
+            TBoxEmailCadFunc.Text = "";
             TBoxCNHCadFunc.Text = "";
             TBoxSenhaCadFunc.Text = "";
             TBoxLoginCadFunc.Text = "";
             MTBoxCelCadFunc.Text = "";
+            CBoxPerfil.Text = "";
 
             if (CBoxSexoCadFunc.Items.Count > 0 );
             {
@@ -60,14 +63,17 @@ namespace Projeto_Facul
 
         private void addParameters(string param)
         {
+
             CRUD.cmd.Parameters.Clear();
             CRUD.cmd.Parameters.AddWithValue("Nome", TBoxNomeCadFunc.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("RG", TBoxRGCadFunc.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("CPF", MTBoxCPFCadFunc.Text.ToString());
+            CRUD.cmd.Parameters.AddWithValue("CPF", MTBoxCPFCadFunc.Text.Trim());
+            CRUD.cmd.Parameters.AddWithValue("Email", TBoxEmailCadFunc.Text.ToString());
             CRUD.cmd.Parameters.AddWithValue("CNH", TBoxCNHCadFunc.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("Login", TBoxLoginCadFunc.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("Senha", TBoxSenhaCadFunc.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("Celular", MTBoxCelCadFunc.Text.ToString());
+            CRUD.cmd.Parameters.AddWithValue("Perfil", CBoxPerfil.SelectedIndex);
+            CRUD.cmd.Parameters.AddWithValue("Celular", MTBoxCelCadFunc.Text.Trim());
             CRUD.cmd.Parameters.AddWithValue("Sexo", CBoxSexoCadFunc.SelectedItem.ToString());
 
         }
@@ -81,41 +87,44 @@ namespace Projeto_Facul
             }
             else if (string.IsNullOrEmpty(TBoxRGCadFunc.Text.Trim()))
             {
-                MessageBox.Show("Por favor insira um nome", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Por favor insira um RG", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-           else if (string.IsNullOrEmpty(MTBoxCelCadFunc.Text.ToString()))
+           else if (string.IsNullOrEmpty(MTBoxCelCadFunc.Text.Trim()))
             {
-                MessageBox.Show("Por favor insira um nome", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Por favor insira um Celular", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-           else if (string.IsNullOrEmpty(MTBoxCPFCadFunc.Text.ToString()))
+           else if (string.IsNullOrEmpty(MTBoxCPFCadFunc.Text.Trim()))
             {
-                MessageBox.Show("Por favor insira um nome", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Por favor insira um CPF", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
            else if (string.IsNullOrEmpty(TBoxEmailCadFunc.Text.Trim()))
             {
-                MessageBox.Show("Por favor insira um nome", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Por favor insira um E-mail", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
           else if (string.IsNullOrEmpty(TBoxCNHCadFunc.Text.Trim()))
             {
-                MessageBox.Show("Por favor insira um nome", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Por favor insira um CNH", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
            else if (string.IsNullOrEmpty(TBoxLoginCadFunc.Text.Trim()))
             {
-                MessageBox.Show("Por favor insira um nome", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Por favor insira um Login", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
            else if (string.IsNullOrEmpty(TBoxSenhaCadFunc.Text.Trim()))
             {
-                MessageBox.Show("Por favor insira um nome", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Por favor insira uma Senha", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-           
-            CRUD.sql = "Insert Into funcionarios(nome, rg, login, senha, cpf, celular, email, sexo, perfil) VALUES(@nome, @rg, @login, @senha, @cpf, @celular, @email, @sexo, @perfil)";
+
+            CRUD.sql = "Insert Into funcionarios2(nome, rg, login, senha, CPF, Celular, email, sexo, perfil) " +
+                "VALUES(@nome, @rg, @login, @senha, @CPF, @Celular, @email, @sexo, @perfil)";
+
+            //CRUD.sql = "inserir_func(@nome, @rg, @login, @senha, @CPF, @Celular, @email, @sexo, @perfil)";
 
             executa(CRUD.sql, "Inserir");
 
@@ -127,6 +136,19 @@ namespace Projeto_Facul
             resetMe();
 
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TBoxNomeCadFunc.Text = "CAYQUE GUILHERME";
+            TBoxRGCadFunc.Text = "38.706.356-0";
+            MTBoxCPFCadFunc.Text = "454.222.668-97 ";
+            TBoxEmailCadFunc.Text = "cayque.142@gmail.com";
+            TBoxCNHCadFunc.Text = "123123123";
+            TBoxSenhaCadFunc.Text = "123123";
+            TBoxLoginCadFunc.Text = "CAYQUEADM";
+            MTBoxCelCadFunc.Text = "(14)99763-7868";
+            CBoxPerfil.Text = "Administrador";
         }
     }
 }
