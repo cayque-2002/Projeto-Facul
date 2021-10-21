@@ -17,6 +17,13 @@ namespace Projeto_Facul.Resources
             InitializeComponent();
         }
 
-            }
+        private void btnRegistrarCli_Click(object sender, EventArgs e)
+        {
+            Cadastrar_Cliente _f9;
+            _f9 = new Cadastrar_Cliente();
+            _f9.ShowDialog();
+            //Hide();
+        }
+    }
         }
    

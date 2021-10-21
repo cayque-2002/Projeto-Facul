@@ -68,7 +68,7 @@ namespace Projeto_Facul
             // 
             // bunifuFBtnOrdemServiço
             // 
-            this.bunifuFBtnOrdemServiço.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFBtnOrdemServiço.Activecolor = System.Drawing.Color.Transparent;
             this.bunifuFBtnOrdemServiço.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFBtnOrdemServiço.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFBtnOrdemServiço.BorderRadius = 0;
@@ -104,7 +104,7 @@ namespace Projeto_Facul
             // 
             // bunifuFBtnProg
             // 
-            this.bunifuFBtnProg.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFBtnProg.Activecolor = System.Drawing.Color.Transparent;
             this.bunifuFBtnProg.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFBtnProg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFBtnProg.BorderRadius = 0;
@@ -137,10 +137,11 @@ namespace Projeto_Facul
             this.bunifuFBtnProg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFBtnProg.Textcolor = System.Drawing.Color.White;
             this.bunifuFBtnProg.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFBtnProg.Click += new System.EventHandler(this.bunifuFBtnProg_Click);
             // 
             // bunifuFBtnFunc
             // 
-            this.bunifuFBtnFunc.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFBtnFunc.Activecolor = System.Drawing.Color.Transparent;
             this.bunifuFBtnFunc.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFBtnFunc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFBtnFunc.BorderRadius = 0;
@@ -187,7 +188,6 @@ namespace Projeto_Facul
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FRMAdministrativo";
             this.Text = "AGGE - Administrativo";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRMAdministrativo_FormClosing);
             this.Load += new System.EventHandler(this.FRMAdministrativo_Load);
             this.panel1.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);

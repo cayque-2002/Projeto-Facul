@@ -19,14 +19,6 @@ namespace Projeto_Facul
 
 
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            Funcionario _f6;
-            _f6 = new Funcionario();
-            _f6.ShowDialog();
-            //Hide();
-        }
-
         private void FRMAdministrativo_Load(object sender, EventArgs e)
         {
             var gradientPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -34,24 +26,18 @@ namespace Projeto_Facul
 
         private void bunifuFBtnFunc_Click(object sender, EventArgs e)
         {
-            Funcionario _f6;
-            _f6 = new Funcionario();
+            FRMFuncionario _f6;
+            _f6 = new FRMFuncionario();
             _f6.ShowDialog();
             //Hide();
         }
 
-        private void FRMAdministrativo_FormClosing(object sender, FormClosingEventArgs e)
+        private void bunifuFBtnProg_Click(object sender, EventArgs e)
         {
-            {
-                if (e.CloseReason == CloseReason.UserClosing)
-                {
-                    var result = MessageBox.Show(this, "Você tem certeza que deseja sair?", "Confirmação", MessageBoxButtons.YesNo);
-                    if (result != DialogResult.Yes)
-                    {
-                        e.Cancel = true;
-                    }
-                }
-            }
+            FRMProgramacoes _f8;
+            _f8 = new FRMProgramacoes();
+            _f8.ShowDialog();
+            //Hide();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace Projeto_Facul
 {
-    partial class Programacoes
+    partial class FRMProgramacoes
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Projeto_Facul
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Programacoes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMProgramacoes));
             this.lbTitProg = new System.Windows.Forms.Label();
             this.TBoxNomeProg = new System.Windows.Forms.TextBox();
             this.LbNomeProg = new System.Windows.Forms.Label();
@@ -42,6 +42,8 @@ namespace Projeto_Facul
             this.TBoxProg = new System.Windows.Forms.TextBox();
             this.LbProg = new System.Windows.Forms.Label();
             this.btnPesquisarProg = new System.Windows.Forms.Button();
+            this.lbValorProg = new System.Windows.Forms.Label();
+            this.TBoxValorProg = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,12 +163,33 @@ namespace Projeto_Facul
             this.btnPesquisarProg.Text = "Pesquisar";
             this.btnPesquisarProg.UseVisualStyleBackColor = true;
             // 
-            // Programacoes
+            // lbValorProg
+            // 
+            this.lbValorProg.AutoSize = true;
+            this.lbValorProg.BackColor = System.Drawing.Color.Transparent;
+            this.lbValorProg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbValorProg.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValorProg.Location = new System.Drawing.Point(429, 154);
+            this.lbValorProg.Name = "lbValorProg";
+            this.lbValorProg.Size = new System.Drawing.Size(74, 25);
+            this.lbValorProg.TabIndex = 20;
+            this.lbValorProg.Text = "Valor:";
+            // 
+            // TBoxValorProg
+            // 
+            this.TBoxValorProg.Location = new System.Drawing.Point(514, 159);
+            this.TBoxValorProg.Name = "TBoxValorProg";
+            this.TBoxValorProg.Size = new System.Drawing.Size(112, 20);
+            this.TBoxValorProg.TabIndex = 19;
+            // 
+            // FRMProgramacoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Facul.Properties.Resources.WhatsApp_Image_2021_10_20_at_8_12_17_PM;
-            this.ClientSize = new System.Drawing.Size(699, 436);
+            this.ClientSize = new System.Drawing.Size(699, 532);
+            this.Controls.Add(this.lbValorProg);
+            this.Controls.Add(this.TBoxValorProg);
             this.Controls.Add(this.btnPesquisarProg);
             this.Controls.Add(this.LbProg);
             this.Controls.Add(this.TBoxProg);
@@ -180,7 +203,7 @@ namespace Projeto_Facul
             this.Controls.Add(this.TBoxNomeProg);
             this.Controls.Add(this.lbTitProg);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Programacoes";
+            this.Name = "FRMProgramacoes";
             this.Text = "Programacoes";
             this.Load += new System.EventHandler(this.Programacoes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -203,5 +226,7 @@ namespace Projeto_Facul
         private System.Windows.Forms.TextBox TBoxProg;
         private System.Windows.Forms.Label LbProg;
         private System.Windows.Forms.Button btnPesquisarProg;
+        private System.Windows.Forms.Label lbValorProg;
+        private System.Windows.Forms.TextBox TBoxValorProg;
     }
 }

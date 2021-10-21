@@ -30,79 +30,78 @@ namespace Projeto_Facul
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMFuncionario));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnFunPesquisar = new System.Windows.Forms.Button();
-            this.LbPerfil = new System.Windows.Forms.Label();
-            this.BtnIncluirFunc = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnPesquisarFunc = new System.Windows.Forms.Button();
+            this.LbPesquisarFunc = new System.Windows.Forms.Label();
+            this.TBoxPesquisarFunc = new System.Windows.Forms.TextBox();
+            this.DGVFunc = new System.Windows.Forms.DataGridView();
+            this.btnIncluirFunc = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVFunc)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // btnPesquisarFunc
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(105, 83);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(677, 314);
-            this.dataGridView1.TabIndex = 0;
+            this.btnPesquisarFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisarFunc.Location = new System.Drawing.Point(630, 38);
+            this.btnPesquisarFunc.Name = "btnPesquisarFunc";
+            this.btnPesquisarFunc.Size = new System.Drawing.Size(87, 25);
+            this.btnPesquisarFunc.TabIndex = 22;
+            this.btnPesquisarFunc.Text = "Pesquisar";
+            this.btnPesquisarFunc.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // LbPesquisarFunc
             // 
-            this.textBox1.Location = new System.Drawing.Point(292, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(330, 20);
-            this.textBox1.TabIndex = 1;
+            this.LbPesquisarFunc.AutoSize = true;
+            this.LbPesquisarFunc.BackColor = System.Drawing.Color.Transparent;
+            this.LbPesquisarFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LbPesquisarFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbPesquisarFunc.Location = new System.Drawing.Point(43, 41);
+            this.LbPesquisarFunc.Name = "LbPesquisarFunc";
+            this.LbPesquisarFunc.Size = new System.Drawing.Size(248, 25);
+            this.LbPesquisarFunc.TabIndex = 21;
+            this.LbPesquisarFunc.Text = "Pesquisar funcionário:";
             // 
-            // btnFunPesquisar
+            // TBoxPesquisarFunc
             // 
-            this.btnFunPesquisar.Location = new System.Drawing.Point(639, 40);
-            this.btnFunPesquisar.Name = "btnFunPesquisar";
-            this.btnFunPesquisar.Size = new System.Drawing.Size(69, 23);
-            this.btnFunPesquisar.TabIndex = 2;
-            this.btnFunPesquisar.Text = "Pesquisar";
-            this.btnFunPesquisar.UseVisualStyleBackColor = true;
+            this.TBoxPesquisarFunc.Location = new System.Drawing.Point(249, 43);
+            this.TBoxPesquisarFunc.Name = "TBoxPesquisarFunc";
+            this.TBoxPesquisarFunc.Size = new System.Drawing.Size(375, 20);
+            this.TBoxPesquisarFunc.TabIndex = 20;
             // 
-            // LbPerfil
+            // DGVFunc
             // 
-            this.LbPerfil.AutoSize = true;
-            this.LbPerfil.BackColor = System.Drawing.Color.Transparent;
-            this.LbPerfil.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbPerfil.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LbPerfil.Location = new System.Drawing.Point(101, 40);
-            this.LbPerfil.Name = "LbPerfil";
-            this.LbPerfil.Size = new System.Drawing.Size(185, 21);
-            this.LbPerfil.TabIndex = 44;
-            this.LbPerfil.Text = "Pesquisar funcionário:";
+            this.DGVFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVFunc.Location = new System.Drawing.Point(48, 89);
+            this.DGVFunc.Name = "DGVFunc";
+            this.DGVFunc.Size = new System.Drawing.Size(708, 284);
+            this.DGVFunc.TabIndex = 19;
             // 
-            // BtnIncluirFunc
+            // btnIncluirFunc
             // 
-            this.BtnIncluirFunc.Location = new System.Drawing.Point(105, 403);
-            this.BtnIncluirFunc.Name = "BtnIncluirFunc";
-            this.BtnIncluirFunc.Size = new System.Drawing.Size(69, 23);
-            this.BtnIncluirFunc.TabIndex = 45;
-            this.BtnIncluirFunc.Text = "Incluir";
-            this.BtnIncluirFunc.UseVisualStyleBackColor = true;
-            this.BtnIncluirFunc.Click += new System.EventHandler(this.BtnIncluirFunc_Click);
+            this.btnIncluirFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirFunc.Location = new System.Drawing.Point(48, 390);
+            this.btnIncluirFunc.Name = "btnIncluirFunc";
+            this.btnIncluirFunc.Size = new System.Drawing.Size(87, 25);
+            this.btnIncluirFunc.TabIndex = 23;
+            this.btnIncluirFunc.Text = "Incluir";
+            this.btnIncluirFunc.UseVisualStyleBackColor = true;
+            this.btnIncluirFunc.Click += new System.EventHandler(this.btnIncluirFunc_Click_1);
             // 
-            // Funcionario
+            // FRMFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(875, 454);
-            this.Controls.Add(this.BtnIncluirFunc);
-            this.Controls.Add(this.LbPerfil);
-            this.Controls.Add(this.btnFunPesquisar);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.DoubleBuffered = true;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnIncluirFunc);
+            this.Controls.Add(this.btnPesquisarFunc);
+            this.Controls.Add(this.LbPesquisarFunc);
+            this.Controls.Add(this.TBoxPesquisarFunc);
+            this.Controls.Add(this.DGVFunc);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Funcionario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Funcionário";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CadastroTecnico_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Name = "FRMFuncionario";
+            this.Text = "Funcionario";
+            ((System.ComponentModel.ISupportInitialize)(this.DGVFunc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,10 +109,10 @@ namespace Projeto_Facul
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnFunPesquisar;
-        private System.Windows.Forms.Label LbPerfil;
-        private System.Windows.Forms.Button BtnIncluirFunc;
+        private System.Windows.Forms.Button btnPesquisarFunc;
+        private System.Windows.Forms.Label LbPesquisarFunc;
+        private System.Windows.Forms.TextBox TBoxPesquisarFunc;
+        private System.Windows.Forms.DataGridView DGVFunc;
+        private System.Windows.Forms.Button btnIncluirFunc;
     }
 }
