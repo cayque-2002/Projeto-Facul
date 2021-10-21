@@ -9,7 +9,9 @@ namespace Projeto_Facul
     {
 
         private string id = "";
+#pragma warning disable CS0414 // O campo "CadastrarFuncionario.intRow" é atribuído, mas seu valor nunca é usado
         private int intRow = 0;
+#pragma warning restore CS0414 // O campo "CadastrarFuncionario.intRow" é atribuído, mas seu valor nunca é usado
 
 
         public CadastrarFuncionario()
@@ -33,7 +35,9 @@ namespace Projeto_Facul
             MTBoxCelCadFunc.Text = "";
             CBoxPerfil.Text = "";
 
+#pragma warning disable CS0642 // Instrução empty possivelmente incorreta
             if (CBoxSexoCadFunc.Items.Count > 0 );
+#pragma warning restore CS0642 // Instrução empty possivelmente incorreta
             {
                 CBoxSexoCadFunc.SelectedIndex = 0;
             }
