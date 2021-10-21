@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Projeto_Facul
 {
-    public partial class FRMProgramacoes : Form
+    public partial class Programacoes : Form
     {
-        public FRMProgramacoes()
+        public Programacoes()
         {
             InitializeComponent();
+        }
+
+        private void Programacoes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

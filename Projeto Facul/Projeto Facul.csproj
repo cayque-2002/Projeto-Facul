@@ -99,11 +99,11 @@
       <DependentUpon>CadastrarFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="CRUD.cs" />
-    <Compile Include="Funcionario.cs">
+    <Compile Include="FRMFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Funcionario.Designer.cs">
-      <DependentUpon>Funcionario.cs</DependentUpon>
+    <Compile Include="FRMFuncionario.Designer.cs">
+      <DependentUpon>FRMFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -130,6 +130,12 @@
       <DependentUpon>Menu AGGE.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Programacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programacoes.Designer.cs">
+      <DependentUpon>Programacoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FRMAtendimento.cs">
       <SubType>Form</SubType>
@@ -140,8 +146,8 @@
     <EmbeddedResource Include="CadastrarFuncionario.resx">
       <DependentUpon>CadastrarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Funcionario.resx">
-      <DependentUpon>Funcionario.cs</DependentUpon>
+    <EmbeddedResource Include="FRMFuncionario.resx">
+      <DependentUpon>FRMFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu AGGE.resx">
       <DependentUpon>Menu AGGE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programacoes.resx">
+      <DependentUpon>Programacoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -187,6 +196,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\atendimento-ao-cliente %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-10-20 at 8.12.17 PM.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
