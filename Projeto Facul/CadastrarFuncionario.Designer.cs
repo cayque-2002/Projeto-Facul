@@ -62,7 +62,7 @@ namespace Projeto_Facul
             this.LbPerfil.BackColor = System.Drawing.Color.Transparent;
             this.LbPerfil.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbPerfil.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LbPerfil.Location = new System.Drawing.Point(399, 267);
+            this.LbPerfil.Location = new System.Drawing.Point(434, 267);
             this.LbPerfil.Name = "LbPerfil";
             this.LbPerfil.Size = new System.Drawing.Size(57, 21);
             this.LbPerfil.TabIndex = 43;
@@ -75,7 +75,7 @@ namespace Projeto_Facul
             "Administrador",
             "Técnico",
             "Vendedor"});
-            this.CBoxPerfil.Location = new System.Drawing.Point(462, 269);
+            this.CBoxPerfil.Location = new System.Drawing.Point(497, 269);
             this.CBoxPerfil.Name = "CBoxPerfil";
             this.CBoxPerfil.Size = new System.Drawing.Size(121, 21);
             this.CBoxPerfil.TabIndex = 42;
@@ -103,7 +103,7 @@ namespace Projeto_Facul
             // 
             // TBoxCNHCadFunc
             // 
-            this.TBoxCNHCadFunc.Location = new System.Drawing.Point(462, 143);
+            this.TBoxCNHCadFunc.Location = new System.Drawing.Point(497, 143);
             this.TBoxCNHCadFunc.Name = "TBoxCNHCadFunc";
             this.TBoxCNHCadFunc.Size = new System.Drawing.Size(188, 20);
             this.TBoxCNHCadFunc.TabIndex = 31;
@@ -114,7 +114,7 @@ namespace Projeto_Facul
             this.lbCNHFunc.BackColor = System.Drawing.Color.Transparent;
             this.lbCNHFunc.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCNHFunc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbCNHFunc.Location = new System.Drawing.Point(420, 141);
+            this.lbCNHFunc.Location = new System.Drawing.Point(455, 141);
             this.lbCNHFunc.Name = "lbCNHFunc";
             this.lbCNHFunc.Size = new System.Drawing.Size(47, 21);
             this.lbCNHFunc.TabIndex = 36;
@@ -122,7 +122,7 @@ namespace Projeto_Facul
             // 
             // TBoxEmailCadFunc
             // 
-            this.TBoxEmailCadFunc.Location = new System.Drawing.Point(462, 103);
+            this.TBoxEmailCadFunc.Location = new System.Drawing.Point(497, 103);
             this.TBoxEmailCadFunc.Name = "TBoxEmailCadFunc";
             this.TBoxEmailCadFunc.Size = new System.Drawing.Size(188, 20);
             this.TBoxEmailCadFunc.TabIndex = 30;
@@ -133,7 +133,7 @@ namespace Projeto_Facul
             this.lbEmailFunc.BackColor = System.Drawing.Color.Transparent;
             this.lbEmailFunc.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmailFunc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbEmailFunc.Location = new System.Drawing.Point(404, 102);
+            this.lbEmailFunc.Location = new System.Drawing.Point(439, 102);
             this.lbEmailFunc.Name = "lbEmailFunc";
             this.lbEmailFunc.Size = new System.Drawing.Size(65, 21);
             this.lbEmailFunc.TabIndex = 35;
@@ -142,7 +142,7 @@ namespace Projeto_Facul
             // MTBoxCPFCadFunc
             // 
             this.MTBoxCPFCadFunc.Location = new System.Drawing.Point(161, 191);
-            this.MTBoxCPFCadFunc.Mask = "000-000-000-00";
+            this.MTBoxCPFCadFunc.Mask = "000.000.000-00";
             this.MTBoxCPFCadFunc.Name = "MTBoxCPFCadFunc";
             this.MTBoxCPFCadFunc.Size = new System.Drawing.Size(152, 20);
             this.MTBoxCPFCadFunc.TabIndex = 28;
@@ -215,7 +215,7 @@ namespace Projeto_Facul
             this.TBoxNomeCadFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TBoxNomeCadFunc.Location = new System.Drawing.Point(161, 101);
             this.TBoxNomeCadFunc.Name = "TBoxNomeCadFunc";
-            this.TBoxNomeCadFunc.Size = new System.Drawing.Size(237, 20);
+            this.TBoxNomeCadFunc.Size = new System.Drawing.Size(275, 20);
             this.TBoxNomeCadFunc.TabIndex = 23;
             // 
             // lbCadFunc
@@ -237,7 +237,7 @@ namespace Projeto_Facul
             this.lbSenhaFunc.BackColor = System.Drawing.Color.Transparent;
             this.lbSenhaFunc.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSenhaFunc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbSenhaFunc.Location = new System.Drawing.Point(392, 225);
+            this.lbSenhaFunc.Location = new System.Drawing.Point(427, 225);
             this.lbSenhaFunc.Name = "lbSenhaFunc";
             this.lbSenhaFunc.Size = new System.Drawing.Size(64, 21);
             this.lbSenhaFunc.TabIndex = 41;
@@ -245,7 +245,7 @@ namespace Projeto_Facul
             // 
             // TBoxSenhaCadFunc
             // 
-            this.TBoxSenhaCadFunc.Location = new System.Drawing.Point(462, 227);
+            this.TBoxSenhaCadFunc.Location = new System.Drawing.Point(497, 227);
             this.TBoxSenhaCadFunc.Name = "TBoxSenhaCadFunc";
             this.TBoxSenhaCadFunc.PasswordChar = '*';
             this.TBoxSenhaCadFunc.Size = new System.Drawing.Size(147, 20);
@@ -253,7 +253,7 @@ namespace Projeto_Facul
             // 
             // TBoxLoginCadFunc
             // 
-            this.TBoxLoginCadFunc.Location = new System.Drawing.Point(462, 187);
+            this.TBoxLoginCadFunc.Location = new System.Drawing.Point(497, 187);
             this.TBoxLoginCadFunc.Name = "TBoxLoginCadFunc";
             this.TBoxLoginCadFunc.Size = new System.Drawing.Size(147, 20);
             this.TBoxLoginCadFunc.TabIndex = 32;
@@ -264,7 +264,7 @@ namespace Projeto_Facul
             this.lbLoginFunc.BackColor = System.Drawing.Color.Transparent;
             this.lbLoginFunc.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLoginFunc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbLoginFunc.Location = new System.Drawing.Point(404, 185);
+            this.lbLoginFunc.Location = new System.Drawing.Point(439, 185);
             this.lbLoginFunc.Name = "lbLoginFunc";
             this.lbLoginFunc.Size = new System.Drawing.Size(57, 21);
             this.lbLoginFunc.TabIndex = 39;

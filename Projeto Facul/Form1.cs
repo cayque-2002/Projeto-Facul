@@ -8,9 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace Projeto_Facul
-{
+{ 
+
     public partial class FRM_AGGE : Form
     {
         private string connstring = String.Format("Server={0};Port={1};" +
@@ -27,28 +29,38 @@ namespace Projeto_Facul
         {
             Close();
         }
-
+       
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (BoxUser.Text == "CAYQUE" && BoxPass.Text == "1234")
+             if (BoxUser.Text == "CAYQUE" && BoxPass.Text == "1234")
+             {
+                 //ENTRE NO SISTEMA
+                 MessageBox.Show("Login efetuado com sucesso!");
+                 {
+                     FRM_Menu _f2;
+                     _f2 = new FRM_Menu();
+                     _f2.ShowDialog();
+                     //Hide();
+                 }
+             }
+             else if (BoxUser.Text == "Usuario2" && BoxPass.Text == "Senha2")
+             {
+                 //ENTRE NO SISTEMA
+             }
+             else
+             {
+                 MessageBox.Show("Usuario nao existe");
+             }
             {
-                //ENTRE NO SISTEMA
-                MessageBox.Show("Login efetuado com sucesso!");
+                BoxPass.Text = string.Empty;
+                for (int i = 0; i < BoxPass.Text.Length; i++) //recebe o conteudo do box e varia que recebe o ++
                 {
-                    FRM_Menu _f2;
-                    _f2 = new FRM_Menu();
-                    _f2.ShowDialog();
-                    //Hide();
+                    int txtSenha = (int)BoxPass.Text[i]; //setou uma variavel representativa
+                    int txtCifrado = txtSenha + 10;  //recebeu a variavel e recebeu o valor da chave (ler texto e ter deslocamento de 10 posições
+                    BoxPass.Text += Char.ConvertFromUtf32(txtCifrado);   //saida usando a tabela ASCII
                 }
             }
-            else if (BoxUser.Text == "Usuario2" && BoxPass.Text == "Senha2")
-            {
-                //ENTRE NO SISTEMA
-            }
-            else
-            {
-                MessageBox.Show("Usuario nao existe");
-            }
+            
         }
 
         private void FRM_AGGE_KeyDown(object sender, KeyEventArgs e)

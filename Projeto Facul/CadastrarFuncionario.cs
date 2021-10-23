@@ -125,8 +125,18 @@ namespace Projeto_Facul
                 return;
             }
 
-            CRUD.sql = "Insert Into funcionarios2(nome, rg, login, senha, CPF, Celular, email, sexo, perfil) " +
-                "VALUES(@nome, @rg, @login, @senha, @CPF, @Celular, @email, @sexo, @perfil)";
+            {
+                TBoxSenhaCadFunc.Text = string.Empty;
+                for (int i = 0; i < TBoxSenhaCadFunc.Text.Length; i++) //recebe o conteudo do box e varia que recebe o ++
+                {
+                    int txtSenha = (int)TBoxSenhaCadFunc.Text[i]; //setou uma variavel representativa
+                    int txtCifrado = txtSenha + 10;  //recebeu a variavel e recebeu o valor da chave (ler texto e ter deslocamento de 10 posições
+                    TBoxSenhaCadFunc.Text += Char.ConvertFromUtf32(txtCifrado);   //saida usando a tabela ASCII
+                }
+            }
+
+            CRUD.sql = "select * from inserir_func(@nome, @rg, @login, @senha, @CPF, @Celular, @email, @sexo, @perfil)";
+                //"VALUES(@nome, @rg, @login, @senha, @CPF, @Celular, @email, @sexo, @perfil)";
 
             //CRUD.sql = "inserir_func(@nome, @rg, @login, @senha, @CPF, @Celular, @email, @sexo, @perfil)";
 
@@ -144,15 +154,15 @@ namespace Projeto_Facul
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TBoxNomeCadFunc.Text = "CAYQUE GUILHERME";
+            TBoxNomeCadFunc.Text = "CAYQUE GUILHERME DE ALVARENGA CARMO";
             TBoxRGCadFunc.Text = "38.706.356-0";
             MTBoxCPFCadFunc.Text = "454.222.668-97 ";
             TBoxEmailCadFunc.Text = "cayque.142@gmail.com";
             TBoxCNHCadFunc.Text = "123123123";
             TBoxSenhaCadFunc.Text = "123123";
-            TBoxLoginCadFunc.Text = "CAYQUEADM";
+            TBoxLoginCadFunc.Text = "CAYQUEG";
             MTBoxCelCadFunc.Text = "(14)99763-7868";
-            CBoxPerfil.Text = "Administrador";
+            
         }
     }
 }
