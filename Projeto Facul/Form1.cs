@@ -16,11 +16,12 @@ namespace Projeto_Facul
 
     public partial class FRM_AGGE : Form
     {
-        private string connstring = String.Format("Server={0};Port={1};" +
-            "Database={2};User Id={3};Password={4};",
-            "localhost", 5432, "dbAGGE",
-            "17052016", "postgres");
-        private NpgsqlConnection conn;
+        public string consString = String.Format("Host={0};Port={1};" +
+            "Database={2};Username={3};Password={4};",
+            "localhost", 5432, "AGGE",
+             "postgres", "abc123");
+        
+        private NpgsqlConnection con;
         
 
         public FRM_AGGE()
@@ -36,9 +37,9 @@ namespace Projeto_Facul
        
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            conn.Open();
+            con.Open();
             string query = "Select * from funcionarios Where login = '"+BoxUser.Text+"'AND senha = '"+BoxPass.Text+"'";
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, conn);
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, con);
             //NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -53,7 +54,7 @@ namespace Projeto_Facul
                     _f2 = new FRM_Menu();
                     _f2.ShowDialog();
                     //Hide();
-                    conn.Close();
+                    con.Close();
                 }
              
             }
@@ -127,7 +128,7 @@ namespace Projeto_Facul
 
         private void FRM_AGGE_Load(object sender, EventArgs e)
         {
-            conn = new NpgsqlConnection(connstring);
+            con = new NpgsqlConnection(consString);
         }
     }
 }

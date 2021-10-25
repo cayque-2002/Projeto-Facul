@@ -34,8 +34,6 @@ namespace Projeto_Facul
             this.CBoxPerfil = new System.Windows.Forms.ComboBox();
             this.BtnLimparCadastroFunc = new System.Windows.Forms.Button();
             this.BtnCadastrarFunc = new System.Windows.Forms.Button();
-            this.TBoxCNHCadFunc = new System.Windows.Forms.TextBox();
-            this.lbCNHFunc = new System.Windows.Forms.Label();
             this.TBoxEmailCadFunc = new System.Windows.Forms.TextBox();
             this.lbEmailFunc = new System.Windows.Forms.Label();
             this.MTBoxCPFCadFunc = new System.Windows.Forms.MaskedTextBox();
@@ -62,7 +60,7 @@ namespace Projeto_Facul
             this.LbPerfil.BackColor = System.Drawing.Color.Transparent;
             this.LbPerfil.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbPerfil.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LbPerfil.Location = new System.Drawing.Point(434, 267);
+            this.LbPerfil.Location = new System.Drawing.Point(440, 215);
             this.LbPerfil.Name = "LbPerfil";
             this.LbPerfil.Size = new System.Drawing.Size(57, 21);
             this.LbPerfil.TabIndex = 43;
@@ -75,7 +73,7 @@ namespace Projeto_Facul
             "Administrador",
             "Técnico",
             "Vendedor"});
-            this.CBoxPerfil.Location = new System.Drawing.Point(497, 269);
+            this.CBoxPerfil.Location = new System.Drawing.Point(503, 217);
             this.CBoxPerfil.Name = "CBoxPerfil";
             this.CBoxPerfil.Size = new System.Drawing.Size(121, 21);
             this.CBoxPerfil.TabIndex = 42;
@@ -100,25 +98,6 @@ namespace Projeto_Facul
             this.BtnCadastrarFunc.Text = "Cadastrar";
             this.BtnCadastrarFunc.UseVisualStyleBackColor = true;
             this.BtnCadastrarFunc.Click += new System.EventHandler(this.BtnCadastrarFunc_Click);
-            // 
-            // TBoxCNHCadFunc
-            // 
-            this.TBoxCNHCadFunc.Location = new System.Drawing.Point(497, 143);
-            this.TBoxCNHCadFunc.Name = "TBoxCNHCadFunc";
-            this.TBoxCNHCadFunc.Size = new System.Drawing.Size(188, 20);
-            this.TBoxCNHCadFunc.TabIndex = 31;
-            // 
-            // lbCNHFunc
-            // 
-            this.lbCNHFunc.AutoSize = true;
-            this.lbCNHFunc.BackColor = System.Drawing.Color.Transparent;
-            this.lbCNHFunc.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCNHFunc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbCNHFunc.Location = new System.Drawing.Point(455, 141);
-            this.lbCNHFunc.Name = "lbCNHFunc";
-            this.lbCNHFunc.Size = new System.Drawing.Size(47, 21);
-            this.lbCNHFunc.TabIndex = 36;
-            this.lbCNHFunc.Text = "CNH:";
             // 
             // TBoxEmailCadFunc
             // 
@@ -237,7 +216,7 @@ namespace Projeto_Facul
             this.lbSenhaFunc.BackColor = System.Drawing.Color.Transparent;
             this.lbSenhaFunc.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSenhaFunc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbSenhaFunc.Location = new System.Drawing.Point(427, 225);
+            this.lbSenhaFunc.Location = new System.Drawing.Point(433, 173);
             this.lbSenhaFunc.Name = "lbSenhaFunc";
             this.lbSenhaFunc.Size = new System.Drawing.Size(64, 21);
             this.lbSenhaFunc.TabIndex = 41;
@@ -245,7 +224,7 @@ namespace Projeto_Facul
             // 
             // TBoxSenhaCadFunc
             // 
-            this.TBoxSenhaCadFunc.Location = new System.Drawing.Point(497, 227);
+            this.TBoxSenhaCadFunc.Location = new System.Drawing.Point(503, 175);
             this.TBoxSenhaCadFunc.Name = "TBoxSenhaCadFunc";
             this.TBoxSenhaCadFunc.PasswordChar = '*';
             this.TBoxSenhaCadFunc.Size = new System.Drawing.Size(147, 20);
@@ -253,7 +232,7 @@ namespace Projeto_Facul
             // 
             // TBoxLoginCadFunc
             // 
-            this.TBoxLoginCadFunc.Location = new System.Drawing.Point(497, 187);
+            this.TBoxLoginCadFunc.Location = new System.Drawing.Point(503, 135);
             this.TBoxLoginCadFunc.Name = "TBoxLoginCadFunc";
             this.TBoxLoginCadFunc.Size = new System.Drawing.Size(147, 20);
             this.TBoxLoginCadFunc.TabIndex = 32;
@@ -264,7 +243,7 @@ namespace Projeto_Facul
             this.lbLoginFunc.BackColor = System.Drawing.Color.Transparent;
             this.lbLoginFunc.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLoginFunc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbLoginFunc.Location = new System.Drawing.Point(439, 185);
+            this.lbLoginFunc.Location = new System.Drawing.Point(445, 133);
             this.lbLoginFunc.Name = "lbLoginFunc";
             this.lbLoginFunc.Size = new System.Drawing.Size(57, 21);
             this.lbLoginFunc.TabIndex = 39;
@@ -321,8 +300,6 @@ namespace Projeto_Facul
             this.Controls.Add(this.lbSenhaFunc);
             this.Controls.Add(this.TBoxLoginCadFunc);
             this.Controls.Add(this.lbLoginFunc);
-            this.Controls.Add(this.TBoxCNHCadFunc);
-            this.Controls.Add(this.lbCNHFunc);
             this.Controls.Add(this.TBoxEmailCadFunc);
             this.Controls.Add(this.lbEmailFunc);
             this.Controls.Add(this.MTBoxCPFCadFunc);
@@ -349,8 +326,6 @@ namespace Projeto_Facul
         private System.Windows.Forms.ComboBox CBoxPerfil;
         private System.Windows.Forms.Button BtnLimparCadastroFunc;
         private System.Windows.Forms.Button BtnCadastrarFunc;
-        private System.Windows.Forms.TextBox TBoxCNHCadFunc;
-        private System.Windows.Forms.Label lbCNHFunc;
         private System.Windows.Forms.TextBox TBoxEmailCadFunc;
         private System.Windows.Forms.Label lbEmailFunc;
         private System.Windows.Forms.MaskedTextBox MTBoxCPFCadFunc;

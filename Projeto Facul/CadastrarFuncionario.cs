@@ -29,7 +29,6 @@ namespace Projeto_Facul
             TBoxRGCadFunc.Text = "";
             MTBoxCPFCadFunc.Text =  "";
             TBoxEmailCadFunc.Text = "";
-            TBoxCNHCadFunc.Text = "";
             TBoxSenhaCadFunc.Text = "";
             TBoxLoginCadFunc.Text = "";
             MTBoxCelCadFunc.Text = "";
@@ -60,25 +59,24 @@ namespace Projeto_Facul
 
         private void executa(string npgsql, string param)
         {
-            CRUD.cmd = new NpgsqlCommand(npgsql, CRUD.con);
+            Program.cmd = new NpgsqlCommand(npgsql, Program.con);
             addParameters(param);
-            CRUD.PerformCrud(CRUD.cmd);
+            Program.PerformCrud(Program.cmd);
         }
 
         private void addParameters(string param)
         {
 
-            CRUD.cmd.Parameters.Clear();
-            CRUD.cmd.Parameters.AddWithValue("Nome", TBoxNomeCadFunc.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("RG", TBoxRGCadFunc.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("CPF", MTBoxCPFCadFunc.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("Email", TBoxEmailCadFunc.Text.ToString());
-            CRUD.cmd.Parameters.AddWithValue("CNH", TBoxCNHCadFunc.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("Login", TBoxLoginCadFunc.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("Senha", TBoxSenhaCadFunc.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("Perfil", CBoxPerfil.SelectedIndex);
-            CRUD.cmd.Parameters.AddWithValue("Celular", MTBoxCelCadFunc.Text.Trim());
-            CRUD.cmd.Parameters.AddWithValue("Sexo", CBoxSexoCadFunc.SelectedItem.ToString());
+            Program.cmd.Parameters.Clear();
+            Program.cmd.Parameters.AddWithValue("Nome", TBoxNomeCadFunc.Text.Trim());
+            Program.cmd.Parameters.AddWithValue("RG", TBoxRGCadFunc.Text.Trim());
+            Program.cmd.Parameters.AddWithValue("CPF", MTBoxCPFCadFunc.Text.Trim());
+            Program.cmd.Parameters.AddWithValue("Email", TBoxEmailCadFunc.Text.ToString());
+            Program.cmd.Parameters.AddWithValue("Login", TBoxLoginCadFunc.Text.Trim());
+            Program.cmd.Parameters.AddWithValue("Senha", TBoxLoginCadFunc.Text.Trim());
+            Program.cmd.Parameters.AddWithValue("Perfil", CBoxPerfil.SelectedIndex);
+            Program.cmd.Parameters.AddWithValue("Celular", MTBoxCelCadFunc.Text.Trim());
+            Program.cmd.Parameters.AddWithValue("Sexo", CBoxSexoCadFunc.SelectedItem.ToString());
 
         }
 
@@ -109,11 +107,6 @@ namespace Projeto_Facul
                 MessageBox.Show("Por favor insira um E-mail", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-          else if (string.IsNullOrEmpty(TBoxCNHCadFunc.Text.Trim()))
-            {
-                MessageBox.Show("Por favor insira um CNH", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
            else if (string.IsNullOrEmpty(TBoxLoginCadFunc.Text.Trim()))
             {
                 MessageBox.Show("Por favor insira um Login", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -135,12 +128,12 @@ namespace Projeto_Facul
                 }
             }
 
-            CRUD.sql = "select * from inserir_func(@nome, @rg, @login, @senha, @CPF, @Celular, @email, @sexo, @perfil)";
+            Program.sql = "select * from inserir_func(@nome, @rg, @login, @senha, @cpf, @celular, @email, @sexo, @perfil)";
                 //"VALUES(@nome, @rg, @login, @senha, @CPF, @Celular, @email, @sexo, @perfil)";
 
             //CRUD.sql = "inserir_func(@nome, @rg, @login, @senha, @CPF, @Celular, @email, @sexo, @perfil)";
 
-            executa(CRUD.sql, "Inserir");
+            executa(Program.sql, "Inserir");
 
             MessageBox.Show("Cadastro salvo.", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
@@ -158,7 +151,6 @@ namespace Projeto_Facul
             TBoxRGCadFunc.Text = "38.706.356-0";
             MTBoxCPFCadFunc.Text = "454.222.668-97 ";
             TBoxEmailCadFunc.Text = "cayque.142@gmail.com";
-            TBoxCNHCadFunc.Text = "123123123";
             TBoxSenhaCadFunc.Text = "123123";
             TBoxLoginCadFunc.Text = "CAYQUEG";
             MTBoxCelCadFunc.Text = "(14)99763-7868";

@@ -20,7 +20,7 @@ namespace Projeto_Facul
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FRM_AGGE());
         }
-        private static string getConnectionString()
+        public static string getConnectionString()
         {
             string host = "Host=localhost;";
             string port = "Port=5432;";
