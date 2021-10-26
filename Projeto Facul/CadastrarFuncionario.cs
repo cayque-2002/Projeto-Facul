@@ -2,6 +2,9 @@
 using System;
 using System.Data;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+using System.Text;
+
 //terminar
 namespace Projeto_Facul
 {
@@ -142,17 +145,20 @@ namespace Projeto_Facul
 
             resetMe();
 
-            
+            string encryptedText = "";
+            Cryptography cryptography =
+                 new Cryptography(System.Configuration.ConfigurationManager.AppSettings["EncryptionKey"]);
+            encryptedText = cryptography.Encrypt("Select senha from funcionarios");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             TBoxNomeCadFunc.Text = "CAYQUE GUILHERME DE ALVARENGA CARMO";
             TBoxRGCadFunc.Text = "38.706.356-0";
-            MTBoxCPFCadFunc.Text = "454.222.668-97 ";
+            MTBoxCPFCadFunc.Text = "454.222.668-97";
             TBoxEmailCadFunc.Text = "cayque.142@gmail.com";
             TBoxSenhaCadFunc.Text = "123123";
-            TBoxLoginCadFunc.Text = "CAYQUEG";
+            TBoxLoginCadFunc.Text = "123123";
             MTBoxCelCadFunc.Text = "(14)99763-7868";
             
         }
