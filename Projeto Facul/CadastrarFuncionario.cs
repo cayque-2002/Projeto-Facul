@@ -76,7 +76,7 @@ namespace Projeto_Facul
             Program.cmd.Parameters.AddWithValue("CPF", MTBoxCPFCadFunc.Text.Trim());
             Program.cmd.Parameters.AddWithValue("Email", TBoxEmailCadFunc.Text.ToString());
             Program.cmd.Parameters.AddWithValue("Login", TBoxLoginCadFunc.Text.Trim());
-            Program.cmd.Parameters.AddWithValue("Senha", TBoxLoginCadFunc.Text.Trim());
+            Program.cmd.Parameters.AddWithValue("Senha", TBoxSenhaCadFunc.Text.Trim());
             Program.cmd.Parameters.AddWithValue("Perfil", CBoxPerfil.SelectedIndex);
             Program.cmd.Parameters.AddWithValue("Celular", MTBoxCelCadFunc.Text.Trim());
             Program.cmd.Parameters.AddWithValue("Sexo", CBoxSexoCadFunc.SelectedItem.ToString());
@@ -121,17 +121,12 @@ namespace Projeto_Facul
                 return;
             }
 
-            {
-                TBoxSenhaCadFunc.Text = string.Empty;
-                for (int i = 0; i < TBoxSenhaCadFunc.Text.Length; i++) //recebe o conteudo do box e varia que recebe o ++
-                {
-                    int txtSenha = (int)TBoxSenhaCadFunc.Text[i]; //setou uma variavel representativa
-                    int txtCifrado = txtSenha + 10;  //recebeu a variavel e recebeu o valor da chave (ler texto e ter deslocamento de 10 posições
-                    TBoxSenhaCadFunc.Text += Char.ConvertFromUtf32(txtCifrado);   //saida usando a tabela ASCII
-                }
-            }
+            
+              
+            
 
-            Program.sql = "select * from inserir_func(@nome, @rg, @login, @senha, @cpf, @celular, @email, @sexo, @perfil)";
+            Program.sql = "select * from inserir_func(@nome, @rg, " +
+                "@login, @senha, @cpf, @celular, @email, @sexo, @perfil)";
                 //"VALUES(@nome, @rg, @login, @senha, @CPF, @Celular, @email, @sexo, @perfil)";
 
             //CRUD.sql = "inserir_func(@nome, @rg, @login, @senha, @CPF, @Celular, @email, @sexo, @perfil)";
@@ -148,7 +143,7 @@ namespace Projeto_Facul
             string encryptedText = "";
             Cryptography cryptography =
                  new Cryptography(System.Configuration.ConfigurationManager.AppSettings["EncryptionKey"]);
-            encryptedText = cryptography.Encrypt("Select senha from funcionarios");
+            encryptedText = cryptography.Encrypt("Select senha from funcionarios"); 
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -158,7 +153,7 @@ namespace Projeto_Facul
             MTBoxCPFCadFunc.Text = "454.222.668-97";
             TBoxEmailCadFunc.Text = "cayque.142@gmail.com";
             TBoxSenhaCadFunc.Text = "123123";
-            TBoxLoginCadFunc.Text = "123123";
+            TBoxLoginCadFunc.Text = "CAYQUE";
             MTBoxCelCadFunc.Text = "(14)99763-7868";
             
         }
