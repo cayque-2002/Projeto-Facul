@@ -202,7 +202,6 @@
     <Compile Include="CadastrarFuncionario.Designer.cs">
       <DependentUpon>CadastrarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cryptography.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

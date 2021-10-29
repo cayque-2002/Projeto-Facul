@@ -44,6 +44,7 @@ namespace Projeto_Facul
             this.btnPesquisarProg = new System.Windows.Forms.Button();
             this.lbValorProg = new System.Windows.Forms.Label();
             this.TBoxValorProg = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,9 +93,9 @@ namespace Projeto_Facul
             // 
             // TBoxVelProg
             // 
-            this.TBoxVelProg.Location = new System.Drawing.Point(351, 238);
+            this.TBoxVelProg.Location = new System.Drawing.Point(369, 238);
             this.TBoxVelProg.Name = "TBoxVelProg";
-            this.TBoxVelProg.Size = new System.Drawing.Size(183, 20);
+            this.TBoxVelProg.Size = new System.Drawing.Size(165, 20);
             this.TBoxVelProg.TabIndex = 10;
             // 
             // LbTipTec
@@ -111,9 +112,9 @@ namespace Projeto_Facul
             // 
             // TBoxTipoTecnologia
             // 
-            this.TBoxTipoTecnologia.Location = new System.Drawing.Point(126, 186);
+            this.TBoxTipoTecnologia.Location = new System.Drawing.Point(268, 186);
             this.TBoxTipoTecnologia.Name = "TBoxTipoTecnologia";
-            this.TBoxTipoTecnologia.Size = new System.Drawing.Size(274, 20);
+            this.TBoxTipoTecnologia.Size = new System.Drawing.Size(132, 20);
             this.TBoxTipoTecnologia.TabIndex = 12;
             // 
             // btnCadProg
@@ -125,6 +126,7 @@ namespace Projeto_Facul
             this.btnCadProg.TabIndex = 14;
             this.btnCadProg.Text = "Cadastrar";
             this.btnCadProg.UseVisualStyleBackColor = true;
+            this.btnCadProg.Click += new System.EventHandler(this.btnCadProg_Click);
             // 
             // dataGridView1
             // 
@@ -136,9 +138,9 @@ namespace Projeto_Facul
             // 
             // TBoxProg
             // 
-            this.TBoxProg.Location = new System.Drawing.Point(163, 311);
+            this.TBoxProg.Location = new System.Drawing.Point(226, 311);
             this.TBoxProg.Name = "TBoxProg";
-            this.TBoxProg.Size = new System.Drawing.Size(314, 20);
+            this.TBoxProg.Size = new System.Drawing.Size(251, 20);
             this.TBoxProg.TabIndex = 16;
             // 
             // LbProg
@@ -182,12 +184,23 @@ namespace Projeto_Facul
             this.TBoxValorProg.Size = new System.Drawing.Size(112, 20);
             this.TBoxValorProg.TabIndex = 19;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(353, 96);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FRMProgramacoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Facul.Properties.Resources.WhatsApp_Image_2021_10_20_at_8_12_17_PM;
             this.ClientSize = new System.Drawing.Size(699, 532);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbValorProg);
             this.Controls.Add(this.TBoxValorProg);
             this.Controls.Add(this.btnPesquisarProg);
@@ -228,5 +241,6 @@ namespace Projeto_Facul
         private System.Windows.Forms.Button btnPesquisarProg;
         private System.Windows.Forms.Label lbValorProg;
         private System.Windows.Forms.TextBox TBoxValorProg;
+        private System.Windows.Forms.Button button1;
     }
 }

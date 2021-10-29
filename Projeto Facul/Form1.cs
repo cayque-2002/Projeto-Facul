@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Security.Cryptography;
 //corrigir exception da conexão do login com o banco
 namespace Projeto_Facul
 { 
@@ -21,7 +20,7 @@ namespace Projeto_Facul
             "localhost", 5432, "AGGE",
              "postgres", "abc123");
         
-        private NpgsqlConnection con;
+        public NpgsqlConnection con;
         
 
         public FRM_AGGE()
@@ -29,6 +28,7 @@ namespace Projeto_Facul
             InitializeComponent();
             BoxUser.Select();
         }
+
 
         private void btnSair_Click(object sender, EventArgs e)
         {
@@ -54,9 +54,9 @@ namespace Projeto_Facul
                     _f2 = new FRM_Menu();
                     _f2.ShowDialog();
                     //Hide();
-                    con.Close();
+                    
                 }
-             
+              
             }
             
              else
@@ -66,17 +66,10 @@ namespace Projeto_Facul
                 BoxPass.Text = "";
                 BoxUser.Select(); //seta o cursor no primeiro campo ou no campo selecionado
              }
-            {
-                BoxPass.Text = string.Empty;
-                for (int i = 0; i < BoxPass.Text.Length; i++) //recebe o conteudo do box e varia que recebe o ++
-                {
-                    int txtSenha = (int)BoxPass.Text[i]; //setou uma variavel representativa
-                    int txtCifrado = txtSenha + 10;  //recebeu a variavel e recebeu o valor da chave (ler texto e ter deslocamento de 10 posições
-                    BoxPass.Text += Char.ConvertFromUtf32(txtCifrado);   //saida usando a tabela ASCII
-                }
 
-            }
-            
+            con.Close();
+
+
         }
 
 
@@ -88,18 +81,7 @@ namespace Projeto_Facul
             }
         }
 
-        private void FRM_AGGE_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                var result = MessageBox.Show(this, "Você tem certeza que deseja sair?", "Confirmação", MessageBoxButtons.YesNo);
 
-                if (result == DialogResult.Yes)
-                {
-                    Application.Exit();
-                }
-            }
-        }
 
         private void FRM_AGGE_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -109,19 +91,6 @@ namespace Projeto_Facul
                 if (result != DialogResult.Yes)
                 {
                     e.Cancel = true;
-                }
-            }
-        }
-
-        private void FRM_AGGE_FormClosed_1(object sender, FormClosedEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                var result = MessageBox.Show(this, "Você tem certeza que deseja sair?", "Confirmação", MessageBoxButtons.YesNo);
-
-                if (result == DialogResult.Yes)
-                {
-                    Application.Exit();
                 }
             }
         }

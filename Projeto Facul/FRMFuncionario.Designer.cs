@@ -33,9 +33,9 @@ namespace Projeto_Facul
             this.btnPesquisarFunc = new System.Windows.Forms.Button();
             this.LbPesquisarFunc = new System.Windows.Forms.Label();
             this.TBoxPesquisarFunc = new System.Windows.Forms.TextBox();
-            this.DGVFunc = new System.Windows.Forms.DataGridView();
+            this.dataGVFunc = new System.Windows.Forms.DataGridView();
             this.btnIncluirFunc = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVFunc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVFunc)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPesquisarFunc
@@ -47,6 +47,7 @@ namespace Projeto_Facul
             this.btnPesquisarFunc.TabIndex = 22;
             this.btnPesquisarFunc.Text = "Pesquisar";
             this.btnPesquisarFunc.UseVisualStyleBackColor = true;
+            this.btnPesquisarFunc.Click += new System.EventHandler(this.btnPesquisarFunc_Click);
             // 
             // LbPesquisarFunc
             // 
@@ -62,18 +63,18 @@ namespace Projeto_Facul
             // 
             // TBoxPesquisarFunc
             // 
-            this.TBoxPesquisarFunc.Location = new System.Drawing.Point(249, 43);
+            this.TBoxPesquisarFunc.Location = new System.Drawing.Point(297, 43);
             this.TBoxPesquisarFunc.Name = "TBoxPesquisarFunc";
-            this.TBoxPesquisarFunc.Size = new System.Drawing.Size(375, 20);
+            this.TBoxPesquisarFunc.Size = new System.Drawing.Size(327, 20);
             this.TBoxPesquisarFunc.TabIndex = 20;
             // 
-            // DGVFunc
+            // dataGVFunc
             // 
-            this.DGVFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVFunc.Location = new System.Drawing.Point(48, 89);
-            this.DGVFunc.Name = "DGVFunc";
-            this.DGVFunc.Size = new System.Drawing.Size(708, 284);
-            this.DGVFunc.TabIndex = 19;
+            this.dataGVFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGVFunc.Location = new System.Drawing.Point(48, 89);
+            this.dataGVFunc.Name = "dataGVFunc";
+            this.dataGVFunc.Size = new System.Drawing.Size(708, 284);
+            this.dataGVFunc.TabIndex = 19;
             // 
             // btnIncluirFunc
             // 
@@ -97,11 +98,12 @@ namespace Projeto_Facul
             this.Controls.Add(this.btnPesquisarFunc);
             this.Controls.Add(this.LbPesquisarFunc);
             this.Controls.Add(this.TBoxPesquisarFunc);
-            this.Controls.Add(this.DGVFunc);
+            this.Controls.Add(this.dataGVFunc);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FRMFuncionario";
             this.Text = "Funcionario";
-            ((System.ComponentModel.ISupportInitialize)(this.DGVFunc)).EndInit();
+            this.Load += new System.EventHandler(this.FRMFuncionario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVFunc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,7 +114,7 @@ namespace Projeto_Facul
         private System.Windows.Forms.Button btnPesquisarFunc;
         private System.Windows.Forms.Label LbPesquisarFunc;
         private System.Windows.Forms.TextBox TBoxPesquisarFunc;
-        private System.Windows.Forms.DataGridView DGVFunc;
+        private System.Windows.Forms.DataGridView dataGVFunc;
         private System.Windows.Forms.Button btnIncluirFunc;
     }
 }

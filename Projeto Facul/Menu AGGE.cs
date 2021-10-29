@@ -18,10 +18,7 @@ namespace Projeto_Facul
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void FRM_Menu_KeyDown(object sender, KeyEventArgs e)
         {
@@ -41,7 +38,7 @@ namespace Projeto_Facul
 
         private void button1_Click(object sender, EventArgs e)
         {
-             FRMAtendimento _f4;
+            FRMAtendimento _f4;
             _f4 = new FRMAtendimento();
             _f4.ShowDialog();
             //Hide();
@@ -49,11 +46,13 @@ namespace Projeto_Facul
 
         private void btnModuloAdm_Click(object sender, EventArgs e)
         {
-            FRMAdministrativo _f5;
-            _f5 = new FRMAdministrativo();
-            _f5.ShowDialog();
-            //Hide();
-        }
+            
+            
+                FRMAdministrativo _f5;
+                _f5 = new FRMAdministrativo();
+                _f5.ShowDialog();
+                //Hide();
+         }
 
         private void FRM_Menu_FormClosing(object sender, FormClosingEventArgs e)
         {

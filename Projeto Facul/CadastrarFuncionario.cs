@@ -138,24 +138,10 @@ namespace Projeto_Facul
 
             loadData("");
 
-            resetMe();
+            resetMe(); 
 
-            string encryptedText = "";
-            Cryptography cryptography =
-                 new Cryptography(System.Configuration.ConfigurationManager.AppSettings["EncryptionKey"]);
-            encryptedText = cryptography.Encrypt("Select senha from funcionarios"); 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            TBoxNomeCadFunc.Text = "CAYQUE GUILHERME DE ALVARENGA CARMO";
-            TBoxRGCadFunc.Text = "38.706.356-0";
-            MTBoxCPFCadFunc.Text = "454.222.668-97";
-            TBoxEmailCadFunc.Text = "cayque.142@gmail.com";
-            TBoxSenhaCadFunc.Text = "123123";
-            TBoxLoginCadFunc.Text = "CAYQUE";
-            MTBoxCelCadFunc.Text = "(14)99763-7868";
-            
-        }
+
     }
 }

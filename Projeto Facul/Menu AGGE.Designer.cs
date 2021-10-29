@@ -82,7 +82,6 @@ namespace Projeto_Facul
             this.lbMenuAGGE.Size = new System.Drawing.Size(349, 57);
             this.lbMenuAGGE.TabIndex = 2;
             this.lbMenuAGGE.Text = "MENU AGGE";
-            this.lbMenuAGGE.Click += new System.EventHandler(this.label1_Click);
             // 
             // BtnModuloAtendimento
             // 

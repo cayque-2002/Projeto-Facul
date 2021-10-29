@@ -139,7 +139,6 @@ namespace Projeto_Facul
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AGGE";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_AGGE_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FRM_AGGE_FormClosed_1);
             this.Load += new System.EventHandler(this.FRM_AGGE_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FRM_AGGE_KeyDown);
             this.ResumeLayout(false);

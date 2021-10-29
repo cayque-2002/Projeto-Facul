@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
 
+
+
 namespace Projeto_Facul
 {
-    static class Program
+
+   /* class Globais
+    {
+        public static Boolean logado = false;
+        public static string query = "Select perfil from funcionarios where perfil = 0"; 
+        //public static int perfil=0; //0=ADM 1=TECNICO 2=VENDEDOR
+    }*/
+  
+        static class Program
     {
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.

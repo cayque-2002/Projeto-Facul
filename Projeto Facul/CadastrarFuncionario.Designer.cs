@@ -51,7 +51,6 @@ namespace Projeto_Facul
             this.lbLoginFunc = new System.Windows.Forms.Label();
             this.lbSexoFunc = new System.Windows.Forms.Label();
             this.CBoxSexoCadFunc = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LbPerfil
@@ -60,7 +59,7 @@ namespace Projeto_Facul
             this.LbPerfil.BackColor = System.Drawing.Color.Transparent;
             this.LbPerfil.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbPerfil.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LbPerfil.Location = new System.Drawing.Point(440, 215);
+            this.LbPerfil.Location = new System.Drawing.Point(440, 229);
             this.LbPerfil.Name = "LbPerfil";
             this.LbPerfil.Size = new System.Drawing.Size(57, 21);
             this.LbPerfil.TabIndex = 43;
@@ -73,7 +72,7 @@ namespace Projeto_Facul
             "Administrador",
             "Técnico",
             "Vendedor"});
-            this.CBoxPerfil.Location = new System.Drawing.Point(503, 217);
+            this.CBoxPerfil.Location = new System.Drawing.Point(503, 231);
             this.CBoxPerfil.Name = "CBoxPerfil";
             this.CBoxPerfil.Size = new System.Drawing.Size(121, 21);
             this.CBoxPerfil.TabIndex = 42;
@@ -216,7 +215,7 @@ namespace Projeto_Facul
             this.lbSenhaFunc.BackColor = System.Drawing.Color.Transparent;
             this.lbSenhaFunc.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSenhaFunc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbSenhaFunc.Location = new System.Drawing.Point(433, 173);
+            this.lbSenhaFunc.Location = new System.Drawing.Point(433, 187);
             this.lbSenhaFunc.Name = "lbSenhaFunc";
             this.lbSenhaFunc.Size = new System.Drawing.Size(64, 21);
             this.lbSenhaFunc.TabIndex = 41;
@@ -224,7 +223,7 @@ namespace Projeto_Facul
             // 
             // TBoxSenhaCadFunc
             // 
-            this.TBoxSenhaCadFunc.Location = new System.Drawing.Point(503, 175);
+            this.TBoxSenhaCadFunc.Location = new System.Drawing.Point(503, 189);
             this.TBoxSenhaCadFunc.Name = "TBoxSenhaCadFunc";
             this.TBoxSenhaCadFunc.PasswordChar = '*';
             this.TBoxSenhaCadFunc.Size = new System.Drawing.Size(147, 20);
@@ -232,7 +231,7 @@ namespace Projeto_Facul
             // 
             // TBoxLoginCadFunc
             // 
-            this.TBoxLoginCadFunc.Location = new System.Drawing.Point(503, 135);
+            this.TBoxLoginCadFunc.Location = new System.Drawing.Point(497, 143);
             this.TBoxLoginCadFunc.Name = "TBoxLoginCadFunc";
             this.TBoxLoginCadFunc.Size = new System.Drawing.Size(147, 20);
             this.TBoxLoginCadFunc.TabIndex = 32;
@@ -243,7 +242,7 @@ namespace Projeto_Facul
             this.lbLoginFunc.BackColor = System.Drawing.Color.Transparent;
             this.lbLoginFunc.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLoginFunc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbLoginFunc.Location = new System.Drawing.Point(445, 133);
+            this.lbLoginFunc.Location = new System.Drawing.Point(439, 141);
             this.lbLoginFunc.Name = "lbLoginFunc";
             this.lbLoginFunc.Size = new System.Drawing.Size(57, 21);
             this.lbLoginFunc.TabIndex = 39;
@@ -255,7 +254,7 @@ namespace Projeto_Facul
             this.lbSexoFunc.BackColor = System.Drawing.Color.Transparent;
             this.lbSexoFunc.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSexoFunc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbSexoFunc.Location = new System.Drawing.Point(98, 288);
+            this.lbSexoFunc.Location = new System.Drawing.Point(98, 271);
             this.lbSexoFunc.Name = "lbSexoFunc";
             this.lbSexoFunc.Size = new System.Drawing.Size(51, 21);
             this.lbSexoFunc.TabIndex = 45;
@@ -267,20 +266,10 @@ namespace Projeto_Facul
             this.CBoxSexoCadFunc.Items.AddRange(new object[] {
             "Masculino",
             "Feminino"});
-            this.CBoxSexoCadFunc.Location = new System.Drawing.Point(161, 290);
+            this.CBoxSexoCadFunc.Location = new System.Drawing.Point(161, 273);
             this.CBoxSexoCadFunc.Name = "CBoxSexoCadFunc";
             this.CBoxSexoCadFunc.Size = new System.Drawing.Size(121, 21);
             this.CBoxSexoCadFunc.TabIndex = 44;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(668, 223);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CadastrarFuncionario
             // 
@@ -289,7 +278,6 @@ namespace Projeto_Facul
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbSexoFunc);
             this.Controls.Add(this.CBoxSexoCadFunc);
             this.Controls.Add(this.LbPerfil);
@@ -343,6 +331,5 @@ namespace Projeto_Facul
         private System.Windows.Forms.Label lbLoginFunc;
         private System.Windows.Forms.Label lbSexoFunc;
         private System.Windows.Forms.ComboBox CBoxSexoCadFunc;
-        private System.Windows.Forms.Button button1;
     }
 }
