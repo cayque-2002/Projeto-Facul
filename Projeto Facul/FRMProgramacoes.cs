@@ -11,9 +11,14 @@ using Npgsql;
 
 namespace Projeto_Facul
 {
+    
     public partial class FRMProgramacoes : Form
     {
-
+        public string consString = String.Format("Host={0};Port={1};" +
+                    "Database={2};Username={3};Password={4};",
+                                    "localhost", 5432, "AGGE",
+                                         "postgres", "abc123");
+        public NpgsqlConnection con;
 
         private string id = "";
 #pragma warning disable CS0414 // O campo "CadastrarFuncionario.intRow" é atribuído, mas seu valor nunca é usado
@@ -39,16 +44,16 @@ namespace Projeto_Facul
 
         }
 
+           
+
         private void Programacoes_Load(object sender, EventArgs e)
         {
-            loadData("");
+
+         
         }
 
 
-        private void loadData(string keyword)
-        {
-            //Tudo
-        }
+     
 
         private void executa(string npgsql, string param)
         {
@@ -64,7 +69,7 @@ namespace Projeto_Facul
             Program.cmd.Parameters.AddWithValue("nome_prog", TBoxNomeProg.Text.Trim());
             Program.cmd.Parameters.AddWithValue("tipo_tecnologia", TBoxTipoTecnologia.Text.Trim());
             Program.cmd.Parameters.AddWithValue("velocidade_prog", TBoxVelProg.Text.Trim());
-            Program.cmd.Parameters.AddWithValue("valor_prog", TBoxValorProg.Text.Trim());
+            Program.cmd.Parameters.AddWithValue("valor_prog", (Convert.ToDouble(TBoxValorProg.Text.Trim())));
 
 
         }
@@ -86,15 +91,18 @@ namespace Projeto_Facul
                 MessageBox.Show("Por favor insira a Velocidade da Programação", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            //erro de conversão valor prog
+          
+
+           
             else if (string.IsNullOrEmpty(TBoxValorProg.Text.Trim()))
             {
+            
                 MessageBox.Show("Por favor insira o Valor da Programação", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             Program.sql = "insert into programacoes(nome_prog, tipo_tecnologia, velocidade_prog, valor_prog) VALUES(@nome_prog, @tipo_tecnologia, @velocidade_prog, @valor_prog)";
-         
+
 
             //CRUD.sql = "inserir_func(@nome, @rg, @login, @senha, @CPF, @Celular, @email, @sexo, @perfil)";
 
@@ -103,17 +111,31 @@ namespace Projeto_Facul
             MessageBox.Show("Cadastro salvo.", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
 
-            loadData("");
 
             resetMe();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+      
+        private void btnPesquisarProg_Click(object sender, EventArgs e)
         {
-            TBoxNomeProg.Text = "Stream 100MB";
-            TBoxTipoTecnologia.Text = "FTTH";
-            TBoxVelProg.Text = "100 Mega";
-            TBoxValorProg.Text = "78.90";
+            con = new NpgsqlConnection(consString);
+
+            con.Open();
+            string query = "Select * from programacoes where nome_prog ilike '%" +TBoxNomeProg.Text+"%'";
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, con);
+            //NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
+            DataTable dt = new DataTable();
+
+            {
+                da.Fill(dt);
+
+                dataGVprog.DataSource = dt;
+            }
+
+            con.Close();
+
         }
     }
 }

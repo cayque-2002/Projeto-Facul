@@ -33,10 +33,8 @@ namespace Projeto_Facul
             this.lbCadCli = new System.Windows.Forms.Label();
             this.lbSexoCli = new System.Windows.Forms.Label();
             this.CBoxSexoCadCli = new System.Windows.Forms.ComboBox();
-            this.BtnLimparCadastroFunc = new System.Windows.Forms.Button();
+            this.BtnLimparCadastroCli = new System.Windows.Forms.Button();
             this.BtnCadastrarFunc = new System.Windows.Forms.Button();
-            this.TBoxCNHCadCli = new System.Windows.Forms.TextBox();
-            this.lbCNHCli = new System.Windows.Forms.Label();
             this.TBoxEmailCadCli = new System.Windows.Forms.TextBox();
             this.lbEmailCli = new System.Windows.Forms.Label();
             this.MTBoxCPFCadCli = new System.Windows.Forms.MaskedTextBox();
@@ -59,6 +57,8 @@ namespace Projeto_Facul
             this.lbNumeroCasa = new System.Windows.Forms.Label();
             this.TBoxComplemento = new System.Windows.Forms.TextBox();
             this.lbComplemento = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbCadCli
@@ -97,15 +97,15 @@ namespace Projeto_Facul
             this.CBoxSexoCadCli.Size = new System.Drawing.Size(121, 21);
             this.CBoxSexoCadCli.TabIndex = 89;
             // 
-            // BtnLimparCadastroFunc
+            // BtnLimparCadastroCli
             // 
-            this.BtnLimparCadastroFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLimparCadastroFunc.Location = new System.Drawing.Point(238, 378);
-            this.BtnLimparCadastroFunc.Name = "BtnLimparCadastroFunc";
-            this.BtnLimparCadastroFunc.Size = new System.Drawing.Size(123, 44);
-            this.BtnLimparCadastroFunc.TabIndex = 84;
-            this.BtnLimparCadastroFunc.Text = "Limpar";
-            this.BtnLimparCadastroFunc.UseVisualStyleBackColor = true;
+            this.BtnLimparCadastroCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLimparCadastroCli.Location = new System.Drawing.Point(238, 378);
+            this.BtnLimparCadastroCli.Name = "BtnLimparCadastroCli";
+            this.BtnLimparCadastroCli.Size = new System.Drawing.Size(123, 44);
+            this.BtnLimparCadastroCli.TabIndex = 84;
+            this.BtnLimparCadastroCli.Text = "Limpar";
+            this.BtnLimparCadastroCli.UseVisualStyleBackColor = true;
             // 
             // BtnCadastrarFunc
             // 
@@ -116,25 +116,7 @@ namespace Projeto_Facul
             this.BtnCadastrarFunc.TabIndex = 83;
             this.BtnCadastrarFunc.Text = "Cadastrar";
             this.BtnCadastrarFunc.UseVisualStyleBackColor = true;
-            // 
-            // TBoxCNHCadCli
-            // 
-            this.TBoxCNHCadCli.Location = new System.Drawing.Point(471, 144);
-            this.TBoxCNHCadCli.Name = "TBoxCNHCadCli";
-            this.TBoxCNHCadCli.Size = new System.Drawing.Size(188, 20);
-            this.TBoxCNHCadCli.TabIndex = 77;
-            // 
-            // lbCNHCli
-            // 
-            this.lbCNHCli.AutoSize = true;
-            this.lbCNHCli.BackColor = System.Drawing.Color.Transparent;
-            this.lbCNHCli.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCNHCli.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbCNHCli.Location = new System.Drawing.Point(429, 142);
-            this.lbCNHCli.Name = "lbCNHCli";
-            this.lbCNHCli.Size = new System.Drawing.Size(47, 21);
-            this.lbCNHCli.TabIndex = 82;
-            this.lbCNHCli.Text = "CNH:";
+            this.BtnCadastrarFunc.Click += new System.EventHandler(this.BtnCadastrarFunc_Click);
             // 
             // TBoxEmailCadCli
             // 
@@ -158,7 +140,7 @@ namespace Projeto_Facul
             // MTBoxCPFCadCli
             // 
             this.MTBoxCPFCadCli.Location = new System.Drawing.Point(170, 193);
-            this.MTBoxCPFCadCli.Mask = "000-000-000-00";
+            this.MTBoxCPFCadCli.Mask = "000.000.000-00";
             this.MTBoxCPFCadCli.Name = "MTBoxCPFCadCli";
             this.MTBoxCPFCadCli.Size = new System.Drawing.Size(152, 20);
             this.MTBoxCPFCadCli.TabIndex = 74;
@@ -236,7 +218,7 @@ namespace Projeto_Facul
             // 
             // TBoxTipoLog
             // 
-            this.TBoxTipoLog.Location = new System.Drawing.Point(498, 207);
+            this.TBoxTipoLog.Location = new System.Drawing.Point(481, 162);
             this.TBoxTipoLog.Name = "TBoxTipoLog";
             this.TBoxTipoLog.Size = new System.Drawing.Size(188, 20);
             this.TBoxTipoLog.TabIndex = 92;
@@ -247,7 +229,7 @@ namespace Projeto_Facul
             this.lbTipoLogradouro.BackColor = System.Drawing.Color.Transparent;
             this.lbTipoLogradouro.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTipoLogradouro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbTipoLogradouro.Location = new System.Drawing.Point(355, 207);
+            this.lbTipoLogradouro.Location = new System.Drawing.Point(338, 162);
             this.lbTipoLogradouro.Name = "lbTipoLogradouro";
             this.lbTipoLogradouro.Size = new System.Drawing.Size(140, 21);
             this.lbTipoLogradouro.TabIndex = 93;
@@ -255,7 +237,7 @@ namespace Projeto_Facul
             // 
             // TBoxLogradouro
             // 
-            this.TBoxLogradouro.Location = new System.Drawing.Point(498, 249);
+            this.TBoxLogradouro.Location = new System.Drawing.Point(481, 204);
             this.TBoxLogradouro.Name = "TBoxLogradouro";
             this.TBoxLogradouro.Size = new System.Drawing.Size(188, 20);
             this.TBoxLogradouro.TabIndex = 94;
@@ -266,7 +248,7 @@ namespace Projeto_Facul
             this.lbLogradouro.BackColor = System.Drawing.Color.Transparent;
             this.lbLogradouro.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLogradouro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbLogradouro.Location = new System.Drawing.Point(390, 249);
+            this.lbLogradouro.Location = new System.Drawing.Point(373, 204);
             this.lbLogradouro.Name = "lbLogradouro";
             this.lbLogradouro.Size = new System.Drawing.Size(102, 21);
             this.lbLogradouro.TabIndex = 95;
@@ -274,7 +256,7 @@ namespace Projeto_Facul
             // 
             // TBoxBairro
             // 
-            this.TBoxBairro.Location = new System.Drawing.Point(498, 290);
+            this.TBoxBairro.Location = new System.Drawing.Point(481, 245);
             this.TBoxBairro.Name = "TBoxBairro";
             this.TBoxBairro.Size = new System.Drawing.Size(188, 20);
             this.TBoxBairro.TabIndex = 96;
@@ -285,7 +267,7 @@ namespace Projeto_Facul
             this.lbBairro.BackColor = System.Drawing.Color.Transparent;
             this.lbBairro.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBairro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbBairro.Location = new System.Drawing.Point(429, 288);
+            this.lbBairro.Location = new System.Drawing.Point(412, 243);
             this.lbBairro.Name = "lbBairro";
             this.lbBairro.Size = new System.Drawing.Size(62, 21);
             this.lbBairro.TabIndex = 97;
@@ -293,7 +275,7 @@ namespace Projeto_Facul
             // 
             // TBoxCidade
             // 
-            this.TBoxCidade.Location = new System.Drawing.Point(498, 334);
+            this.TBoxCidade.Location = new System.Drawing.Point(481, 289);
             this.TBoxCidade.Name = "TBoxCidade";
             this.TBoxCidade.Size = new System.Drawing.Size(188, 20);
             this.TBoxCidade.TabIndex = 98;
@@ -304,7 +286,7 @@ namespace Projeto_Facul
             this.lbCidade.BackColor = System.Drawing.Color.Transparent;
             this.lbCidade.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCidade.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbCidade.Location = new System.Drawing.Point(423, 332);
+            this.lbCidade.Location = new System.Drawing.Point(406, 287);
             this.lbCidade.Name = "lbCidade";
             this.lbCidade.Size = new System.Drawing.Size(69, 21);
             this.lbCidade.TabIndex = 99;
@@ -312,7 +294,7 @@ namespace Projeto_Facul
             // 
             // TBoxNumeroCasa
             // 
-            this.TBoxNumeroCasa.Location = new System.Drawing.Point(731, 249);
+            this.TBoxNumeroCasa.Location = new System.Drawing.Point(714, 204);
             this.TBoxNumeroCasa.Name = "TBoxNumeroCasa";
             this.TBoxNumeroCasa.Size = new System.Drawing.Size(54, 20);
             this.TBoxNumeroCasa.TabIndex = 100;
@@ -323,7 +305,7 @@ namespace Projeto_Facul
             this.lbNumeroCasa.BackColor = System.Drawing.Color.Transparent;
             this.lbNumeroCasa.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNumeroCasa.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbNumeroCasa.Location = new System.Drawing.Point(692, 249);
+            this.lbNumeroCasa.Location = new System.Drawing.Point(675, 204);
             this.lbNumeroCasa.Name = "lbNumeroCasa";
             this.lbNumeroCasa.Size = new System.Drawing.Size(33, 21);
             this.lbNumeroCasa.TabIndex = 101;
@@ -331,7 +313,7 @@ namespace Projeto_Facul
             // 
             // TBoxComplemento
             // 
-            this.TBoxComplemento.Location = new System.Drawing.Point(497, 376);
+            this.TBoxComplemento.Location = new System.Drawing.Point(480, 331);
             this.TBoxComplemento.Name = "TBoxComplemento";
             this.TBoxComplemento.Size = new System.Drawing.Size(188, 20);
             this.TBoxComplemento.TabIndex = 102;
@@ -342,11 +324,30 @@ namespace Projeto_Facul
             this.lbComplemento.BackColor = System.Drawing.Color.Transparent;
             this.lbComplemento.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbComplemento.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbComplemento.Location = new System.Drawing.Point(373, 374);
+            this.lbComplemento.Location = new System.Drawing.Point(356, 329);
             this.lbComplemento.Name = "lbComplemento";
             this.lbComplemento.Size = new System.Drawing.Size(122, 21);
             this.lbComplemento.TabIndex = 103;
             this.lbComplemento.Text = "Complemento:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 104;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(693, 68);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 105;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Cadastrar_Cliente
             // 
@@ -355,6 +356,8 @@ namespace Projeto_Facul
             this.BackgroundImage = global::Projeto_Facul.Properties.Resources.Fundo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.TBoxComplemento);
             this.Controls.Add(this.lbComplemento);
             this.Controls.Add(this.TBoxNumeroCasa);
@@ -370,10 +373,8 @@ namespace Projeto_Facul
             this.Controls.Add(this.lbCadCli);
             this.Controls.Add(this.lbSexoCli);
             this.Controls.Add(this.CBoxSexoCadCli);
-            this.Controls.Add(this.BtnLimparCadastroFunc);
+            this.Controls.Add(this.BtnLimparCadastroCli);
             this.Controls.Add(this.BtnCadastrarFunc);
-            this.Controls.Add(this.TBoxCNHCadCli);
-            this.Controls.Add(this.lbCNHCli);
             this.Controls.Add(this.TBoxEmailCadCli);
             this.Controls.Add(this.lbEmailCli);
             this.Controls.Add(this.MTBoxCPFCadCli);
@@ -397,10 +398,8 @@ namespace Projeto_Facul
         private System.Windows.Forms.Label lbCadCli;
         private System.Windows.Forms.Label lbSexoCli;
         private System.Windows.Forms.ComboBox CBoxSexoCadCli;
-        private System.Windows.Forms.Button BtnLimparCadastroFunc;
+        private System.Windows.Forms.Button BtnLimparCadastroCli;
         private System.Windows.Forms.Button BtnCadastrarFunc;
-        private System.Windows.Forms.TextBox TBoxCNHCadCli;
-        private System.Windows.Forms.Label lbCNHCli;
         private System.Windows.Forms.TextBox TBoxEmailCadCli;
         private System.Windows.Forms.Label lbEmailCli;
         private System.Windows.Forms.MaskedTextBox MTBoxCPFCadCli;
@@ -423,5 +422,7 @@ namespace Projeto_Facul
         private System.Windows.Forms.Label lbNumeroCasa;
         private System.Windows.Forms.TextBox TBoxComplemento;
         private System.Windows.Forms.Label lbComplemento;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

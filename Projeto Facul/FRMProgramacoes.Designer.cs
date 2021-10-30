@@ -38,14 +38,13 @@ namespace Projeto_Facul
             this.LbTipTec = new System.Windows.Forms.Label();
             this.TBoxTipoTecnologia = new System.Windows.Forms.TextBox();
             this.btnCadProg = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGVprog = new System.Windows.Forms.DataGridView();
             this.TBoxProg = new System.Windows.Forms.TextBox();
             this.LbProg = new System.Windows.Forms.Label();
             this.btnPesquisarProg = new System.Windows.Forms.Button();
             this.lbValorProg = new System.Windows.Forms.Label();
             this.TBoxValorProg = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVprog)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTitProg
@@ -128,13 +127,14 @@ namespace Projeto_Facul
             this.btnCadProg.UseVisualStyleBackColor = true;
             this.btnCadProg.Click += new System.EventHandler(this.btnCadProg_Click);
             // 
-            // dataGridView1
+            // dataGVprog
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(46, 337);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(607, 150);
-            this.dataGridView1.TabIndex = 15;
+            this.dataGVprog.AllowDrop = true;
+            this.dataGVprog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGVprog.Location = new System.Drawing.Point(46, 337);
+            this.dataGVprog.Name = "dataGVprog";
+            this.dataGVprog.Size = new System.Drawing.Size(607, 150);
+            this.dataGVprog.TabIndex = 15;
             // 
             // TBoxProg
             // 
@@ -164,6 +164,7 @@ namespace Projeto_Facul
             this.btnPesquisarProg.TabIndex = 18;
             this.btnPesquisarProg.Text = "Pesquisar";
             this.btnPesquisarProg.UseVisualStyleBackColor = true;
+            this.btnPesquisarProg.Click += new System.EventHandler(this.btnPesquisarProg_Click);
             // 
             // lbValorProg
             // 
@@ -184,29 +185,18 @@ namespace Projeto_Facul
             this.TBoxValorProg.Size = new System.Drawing.Size(112, 20);
             this.TBoxValorProg.TabIndex = 19;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(353, 96);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FRMProgramacoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Facul.Properties.Resources.WhatsApp_Image_2021_10_20_at_8_12_17_PM;
             this.ClientSize = new System.Drawing.Size(699, 532);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbValorProg);
             this.Controls.Add(this.TBoxValorProg);
             this.Controls.Add(this.btnPesquisarProg);
             this.Controls.Add(this.LbProg);
             this.Controls.Add(this.TBoxProg);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGVprog);
             this.Controls.Add(this.btnCadProg);
             this.Controls.Add(this.LbTipTec);
             this.Controls.Add(this.TBoxTipoTecnologia);
@@ -219,7 +209,7 @@ namespace Projeto_Facul
             this.Name = "FRMProgramacoes";
             this.Text = "Programacoes";
             this.Load += new System.EventHandler(this.Programacoes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVprog)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,12 +225,11 @@ namespace Projeto_Facul
         private System.Windows.Forms.Label LbTipTec;
         private System.Windows.Forms.TextBox TBoxTipoTecnologia;
         private System.Windows.Forms.Button btnCadProg;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGVprog;
         private System.Windows.Forms.TextBox TBoxProg;
         private System.Windows.Forms.Label LbProg;
         private System.Windows.Forms.Button btnPesquisarProg;
         private System.Windows.Forms.Label lbValorProg;
         private System.Windows.Forms.TextBox TBoxValorProg;
-        private System.Windows.Forms.Button button1;
     }
 }

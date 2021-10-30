@@ -84,6 +84,7 @@ namespace Projeto_Facul.Resources
             this.CBoxCliente.Name = "CBoxCliente";
             this.CBoxCliente.Size = new System.Drawing.Size(456, 21);
             this.CBoxCliente.TabIndex = 30;
+            this.CBoxCliente.Enter += new System.EventHandler(this.CBoxCliente_Enter);
             // 
             // lbEnderecoConFunc
             // 
