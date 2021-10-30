@@ -91,8 +91,11 @@ namespace Projeto_Facul.Resources
             CBoxValorProgVenda.DataSource = dtProg;
             con.Close();
         }
-        
-          
+
+        private void btnRegistrarVenda_Click(object sender, EventArgs e)
+        {
+            //realizar insert em contrato
+        }
     }
     }
         

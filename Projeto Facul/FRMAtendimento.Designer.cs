@@ -63,6 +63,7 @@ namespace Projeto_Facul.Resources
             this.btnRegistrarVenda.TabIndex = 28;
             this.btnRegistrarVenda.Text = "Registrar Venda";
             this.btnRegistrarVenda.UseVisualStyleBackColor = true;
+            this.btnRegistrarVenda.Click += new System.EventHandler(this.btnRegistrarVenda_Click);
             // 
             // LbPesquisarFunc
             // 
