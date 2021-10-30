@@ -32,24 +32,68 @@ namespace Projeto_Facul.Resources
             //Hide();
         }
 
-        private void CBoxCliente_Enter(object sender, EventArgs e)
+        private void FRMAtendimento_Load(object sender, EventArgs e)
         {
             con = new NpgsqlConnection(consString);
 
             con.Open();
-            string query = "Select * from clientes where nome_prog ilike '%" + CBoxCliente.Text + "%'";
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, con);
+            string queryNome = "Select * from clientes";
+            NpgsqlDataAdapter daNome = new NpgsqlDataAdapter(queryNome, con);
+            //NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
+            DataTable dtNome = new DataTable();
+            daNome.Fill(dtNome);
+            CBoxCliente.DisplayMember = "nome_cli";
+            CBoxCliente.DataSource = dtNome;
+            con.Close();
+
+            con = new NpgsqlConnection(consString);
+
+            con.Open();
+            string queryEndereco = "select tipo_logradouro_cli, " +
+                "logradouro_cli, numero_residencia, bairro_cli, cidade_cli, " +
+                "complemento_endereco_cli from clientes where nome_cli = '" + CBoxCliente.SelectedItem + "'";
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(queryNome, con);
             //NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
             DataTable dt = new DataTable();
 
-            
             da.Fill(dt);
+            CBoxTipoLogCon.DisplayMember = "tipo_logradouro_cli"; /* + "logradouro_cli" + "numero_residencia" +
+                "bairro_cli" + "cidade_cli" + "complemento_endereco_cli";*/
+            CBoxTipoLogCon.DataSource = dt;
 
-            
-            
+            CBoxLogradouroCon.DisplayMember = "logradouro_cli";
+            CBoxLogradouroCon.DataSource = dt;
 
+            CBoxNumeroCon.DisplayMember = "numero_residencia";
+            CBoxNumeroCon.DataSource = dt;
+
+            CBoxBairroCon.DisplayMember = "bairro_cli";
+            CBoxBairroCon.DataSource = dt;
+
+            CBoxCidadeCon.DisplayMember = "cidade_cli";
+            CBoxCidadeCon.DataSource = dt;
+
+            CBoxComplementoCon.DisplayMember = "complemento_endereco_cli";
+            CBoxComplementoCon.DataSource = dt;
+            con.Close();
+
+            con = new NpgsqlConnection(consString);
+
+            con.Open();
+            string queryProg = "Select * from programacoes";
+            NpgsqlDataAdapter daProg = new NpgsqlDataAdapter(queryProg, con);
+            //NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
+            DataTable dtProg = new DataTable();
+            daProg.Fill(dtProg);
+            CBoxProg.DisplayMember = "nome_prog";
+            CBoxProg.DataSource = dtProg;
+            CBoxValorProgVenda.DisplayMember = "valor_prog";
+            CBoxValorProgVenda.DataSource = dtProg;
             con.Close();
         }
+        
+          
     }
-        }
+    }
+        
    

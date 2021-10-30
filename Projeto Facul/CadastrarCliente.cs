@@ -22,6 +22,7 @@ namespace Projeto_Facul
         public Cadastrar_Cliente()
         {
             InitializeComponent();
+            resetMe();
         }
 
         private void resetMe()
@@ -54,10 +55,6 @@ namespace Projeto_Facul
 
         }
 
-        private void CadastrarCliente_Load(object sender, EventArgs e)
-        {
-            loadData("");
-        }
         private void loadData(string keyword)
         {
             //Tudo
@@ -146,11 +143,13 @@ namespace Projeto_Facul
                 MessageBox.Show("Por favor insira uma Complemento", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            //42601 syntax error at or near ")"
+
 
 
             Program.sql = "select * from inserir_cli(@nome_cli, @rg_cli, @cpf_cli, " +
                 "@celular_cli, @sexo, @email_cli, @tipo_logradouro_cli, @logradouro_cli, @numero_residencia, " +
-                "@bairro_cli, @cidade_cli, @complemento_endereco_cli,)";
+                "@bairro_cli, @cidade_cli, @complemento_endereco_cli)";
             
             executa(Program.sql, "Inserir");
 
@@ -168,8 +167,8 @@ namespace Projeto_Facul
 
             TBoxNomeCadCli.Text = "cleiton";
             TBoxRGCadCli.Text = "45.659.253-2";
-            MTBoxCPFCadCli.Text = "22378978821";
-            MTBoxCelCadCli.Text = "14997524146";
+            MTBoxCPFCadCli.Text = "223.789.788-21";
+            MTBoxCelCadCli.Text = "(14)99752-4146";
             TBoxEmailCadCli.Text = "teste@cleiton.com.br";
             TBoxTipoLog.Text = "rua";
             TBoxLogradouro.Text = "feijó washington";
@@ -177,6 +176,11 @@ namespace Projeto_Facul
             TBoxBairro.Text = "Benjamin flores";
             TBoxCidade.Text = "Marilia";
             TBoxComplemento.Text = "aa";
+        }
+
+        private void Cadastrar_Cliente_Load(object sender, EventArgs e)
+        {
+            loadData("");
         }
     }
 }

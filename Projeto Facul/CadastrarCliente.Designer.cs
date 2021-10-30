@@ -388,6 +388,7 @@ namespace Projeto_Facul
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cadastrar_Cliente";
             this.Text = "Cadastrar_Cliente";
+            this.Load += new System.EventHandler(this.Cadastrar_Cliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
