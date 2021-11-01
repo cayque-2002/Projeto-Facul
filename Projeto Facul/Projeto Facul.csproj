@@ -202,6 +202,12 @@
     <Compile Include="CadastrarFuncionario.Designer.cs">
       <DependentUpon>CadastrarFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chamados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chamados.Designer.cs">
+      <DependentUpon>Chamados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,11 +252,20 @@
     <Compile Include="FRMAtendimento.Designer.cs">
       <DependentUpon>FRMAtendimento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Servicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servicos.Designer.cs">
+      <DependentUpon>Servicos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CadastrarCliente.resx">
       <DependentUpon>CadastrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastrarFuncionario.resx">
       <DependentUpon>CadastrarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chamados.resx">
+      <DependentUpon>Chamados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -283,6 +298,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Servicos.resx">
+      <DependentUpon>Servicos.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

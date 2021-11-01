@@ -218,6 +218,14 @@ namespace Projeto_Facul.Resources
 
 
         }
+
+        private void btnAbrirChamado_Click(object sender, EventArgs e)
+        {
+            Chamados _f10;
+            _f10 = new Chamados();
+            _f10.ShowDialog();
+            //Hide();
+        }
     }
     }
         

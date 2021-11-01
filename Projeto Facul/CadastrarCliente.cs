@@ -162,21 +162,6 @@ namespace Projeto_Facul
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            TBoxNomeCadCli.Text = "cleiton";
-            TBoxRGCadCli.Text = "45.659.253-2";
-            MTBoxCPFCadCli.Text = "223.789.788-21";
-            MTBoxCelCadCli.Text = "(14)99752-4146";
-            TBoxEmailCadCli.Text = "teste@cleiton.com.br";
-            TBoxTipoLog.Text = "rua";
-            TBoxLogradouro.Text = "feijó washington";
-            TBoxNumeroCasa.Text = "222";
-            TBoxBairro.Text = "Benjamin flores";
-            TBoxCidade.Text = "Marilia";
-            TBoxComplemento.Text = "aa";
-        }
 
         private void Cadastrar_Cliente_Load(object sender, EventArgs e)
         {

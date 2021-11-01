@@ -34,7 +34,7 @@ namespace Projeto_Facul
             this.lbSexoCli = new System.Windows.Forms.Label();
             this.CBoxSexoCadCli = new System.Windows.Forms.ComboBox();
             this.BtnLimparCadastroCli = new System.Windows.Forms.Button();
-            this.BtnCadastrarFunc = new System.Windows.Forms.Button();
+            this.BtnCadastrarCli = new System.Windows.Forms.Button();
             this.TBoxEmailCadCli = new System.Windows.Forms.TextBox();
             this.lbEmailCli = new System.Windows.Forms.Label();
             this.MTBoxCPFCadCli = new System.Windows.Forms.MaskedTextBox();
@@ -57,8 +57,6 @@ namespace Projeto_Facul
             this.lbNumeroCasa = new System.Windows.Forms.Label();
             this.TBoxComplemento = new System.Windows.Forms.TextBox();
             this.lbComplemento = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbCadCli
@@ -107,16 +105,16 @@ namespace Projeto_Facul
             this.BtnLimparCadastroCli.Text = "Limpar";
             this.BtnLimparCadastroCli.UseVisualStyleBackColor = true;
             // 
-            // BtnCadastrarFunc
+            // BtnCadastrarCli
             // 
-            this.BtnCadastrarFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCadastrarFunc.Location = new System.Drawing.Point(70, 378);
-            this.BtnCadastrarFunc.Name = "BtnCadastrarFunc";
-            this.BtnCadastrarFunc.Size = new System.Drawing.Size(123, 44);
-            this.BtnCadastrarFunc.TabIndex = 83;
-            this.BtnCadastrarFunc.Text = "Cadastrar";
-            this.BtnCadastrarFunc.UseVisualStyleBackColor = true;
-            this.BtnCadastrarFunc.Click += new System.EventHandler(this.BtnCadastrarFunc_Click);
+            this.BtnCadastrarCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCadastrarCli.Location = new System.Drawing.Point(70, 378);
+            this.BtnCadastrarCli.Name = "BtnCadastrarCli";
+            this.BtnCadastrarCli.Size = new System.Drawing.Size(123, 44);
+            this.BtnCadastrarCli.TabIndex = 83;
+            this.BtnCadastrarCli.Text = "Cadastrar";
+            this.BtnCadastrarCli.UseVisualStyleBackColor = true;
+            this.BtnCadastrarCli.Click += new System.EventHandler(this.BtnCadastrarFunc_Click);
             // 
             // TBoxEmailCadCli
             // 
@@ -330,25 +328,6 @@ namespace Projeto_Facul
             this.lbComplemento.TabIndex = 103;
             this.lbComplemento.Text = "Complemento:";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 104;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(693, 68);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 105;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Cadastrar_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,8 +335,6 @@ namespace Projeto_Facul
             this.BackgroundImage = global::Projeto_Facul.Properties.Resources.Fundo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.TBoxComplemento);
             this.Controls.Add(this.lbComplemento);
             this.Controls.Add(this.TBoxNumeroCasa);
@@ -374,7 +351,7 @@ namespace Projeto_Facul
             this.Controls.Add(this.lbSexoCli);
             this.Controls.Add(this.CBoxSexoCadCli);
             this.Controls.Add(this.BtnLimparCadastroCli);
-            this.Controls.Add(this.BtnCadastrarFunc);
+            this.Controls.Add(this.BtnCadastrarCli);
             this.Controls.Add(this.TBoxEmailCadCli);
             this.Controls.Add(this.lbEmailCli);
             this.Controls.Add(this.MTBoxCPFCadCli);
@@ -400,7 +377,7 @@ namespace Projeto_Facul
         private System.Windows.Forms.Label lbSexoCli;
         private System.Windows.Forms.ComboBox CBoxSexoCadCli;
         private System.Windows.Forms.Button BtnLimparCadastroCli;
-        private System.Windows.Forms.Button BtnCadastrarFunc;
+        private System.Windows.Forms.Button BtnCadastrarCli;
         private System.Windows.Forms.TextBox TBoxEmailCadCli;
         private System.Windows.Forms.Label lbEmailCli;
         private System.Windows.Forms.MaskedTextBox MTBoxCPFCadCli;
@@ -423,7 +400,5 @@ namespace Projeto_Facul
         private System.Windows.Forms.Label lbNumeroCasa;
         private System.Windows.Forms.TextBox TBoxComplemento;
         private System.Windows.Forms.Label lbComplemento;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }

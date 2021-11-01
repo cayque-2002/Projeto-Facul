@@ -39,5 +39,13 @@ namespace Projeto_Facul
             _f8.ShowDialog();
             //Hide();
         }
+
+        private void bunifuFBtnOrdemServiço_Click(object sender, EventArgs e)
+        {
+            Servicos _f11;
+            _f11 = new Servicos();
+            _f11.ShowDialog();
+            //Hide();
+        }
     }
 }
