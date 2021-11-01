@@ -13,6 +13,8 @@ namespace Projeto_Facul.Resources
 {
     public partial class FRMAtendimento : Form
     {
+        private string id = "";
+
         public string consString = String.Format("Host={0};Port={1};" +
                    "Database={2};Username={3};Password={4};",
                                    "localhost", 5432, "AGGE",
@@ -22,7 +24,54 @@ namespace Projeto_Facul.Resources
         public FRMAtendimento()
         {
             InitializeComponent();
+            resetMe();
         }
+        private void resetMe()
+        {
+            this.id = string.Empty;
+
+
+            CBoxCliente.Text = "";
+            CBoxTipoLogCon.Text = "";
+            CBoxLogradouroCon.Text = "";
+            CBoxNumeroCon.Text = "";
+            CBoxBairroCon.Text = "";
+            CBoxCidadeCon.Text = "";
+            CBoxComplementoCon.Text = "";
+            CBoxProg.Text = "";
+            CBoxValorProgVenda.Text = "";
+        }
+        private void loadData(string keyword)
+        {
+            //Tudo
+        }
+
+        private void executa(string npgsql, string param)
+        {
+            Program.cmd = new NpgsqlCommand(npgsql, Program.con);
+            addParameters(param);
+            Program.PerformCrud(Program.cmd);
+        }
+
+        private void addParameters(string param)
+        {
+
+            Program.cmd.Parameters.Clear();
+            Program.cmd.Parameters.AddWithValue("idcliente", (Convert.ToInt32(CBoxIDCli.Text.Trim())));
+            Program.cmd.Parameters.AddWithValue("idprogramacao", (Convert.ToInt32(CBoxIDProg.Text.Trim())));
+            Program.cmd.Parameters.AddWithValue("tipo_logradouro_ct", CBoxTipoLogCon.Text.Trim());
+            Program.cmd.Parameters.AddWithValue("logradouro_ct", CBoxLogradouroCon.Text.Trim());
+            Program.cmd.Parameters.AddWithValue("numero_residencia_ct", CBoxNumeroCon.Text.Trim());
+            Program.cmd.Parameters.AddWithValue("bairro_cli_ct", CBoxBairroCon.Text.Trim());
+            Program.cmd.Parameters.AddWithValue("cidade_ct", CBoxCidadeCon.Text.Trim());
+            Program.cmd.Parameters.AddWithValue("complemento_endereco_ct", CBoxComplementoCon.Text.Trim());
+     
+
+            
+
+
+        }
+
 
         private void btnRegistrarCli_Click(object sender, EventArgs e)
         {
@@ -44,6 +93,10 @@ namespace Projeto_Facul.Resources
             daNome.Fill(dtNome);
             CBoxCliente.DisplayMember = "nome_cli";
             CBoxCliente.DataSource = dtNome;
+            
+            CBoxIDCli.DisplayMember = "idcli";
+            CBoxIDCli.DataSource = dtNome;
+
             con.Close();
 
             con = new NpgsqlConnection(consString);
@@ -87,14 +140,83 @@ namespace Projeto_Facul.Resources
             daProg.Fill(dtProg);
             CBoxProg.DisplayMember = "nome_prog";
             CBoxProg.DataSource = dtProg;
+
+            CBoxIDProg.DisplayMember = "idprog";
+            CBoxIDProg.DataSource = dtProg;
+
             CBoxValorProgVenda.DisplayMember = "valor_prog";
             CBoxValorProgVenda.DataSource = dtProg;
             con.Close();
+
+            loadData("");
         }
 
         private void btnRegistrarVenda_Click(object sender, EventArgs e)
         {
             //realizar insert em contrato
+
+            if (string.IsNullOrEmpty(CBoxCliente.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira um Cliente", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxTipoLogCon.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira um Tipo de Logradouro", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxLogradouroCon.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira um Logradouro", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxNumeroCon.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira um Número de residência", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxBairroCon.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira um Bairro", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxCidadeCon.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira uma Cidade", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxComplementoCon.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira um Complemento de Endereço", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxProg.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira uma Programação", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxValorProgVenda.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira um Valor de Programação", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+
+            Program.sql = "insert into contratos(idcliente, idprogramacao, tipo_logradouro_ct," +
+                "logradouro_ct, numero_residencia_ct, bairro_cli_ct, cidade_ct, complemento_endereco_ct) " +
+                "Values(@idcliente, @idprogramacao, @tipo_logradouro_ct, @logradouro_ct, @numero_residencia_ct," +
+                "@bairro_cli_ct, @cidade_ct, @complemento_endereco_ct)";
+
+            executa(Program.sql, "Inserir");
+
+            MessageBox.Show("Cadastro salvo.", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+            loadData("");
+
+            resetMe();
+
+
         }
     }
     }

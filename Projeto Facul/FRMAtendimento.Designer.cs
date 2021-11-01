@@ -52,12 +52,16 @@ namespace Projeto_Facul.Resources
             this.lbCidade = new System.Windows.Forms.Label();
             this.lbComplemento = new System.Windows.Forms.Label();
             this.CBoxValorProgVenda = new System.Windows.Forms.ComboBox();
+            this.lbIdCliVen = new System.Windows.Forms.Label();
+            this.CBoxIDCli = new System.Windows.Forms.ComboBox();
+            this.CBoxIDProg = new System.Windows.Forms.ComboBox();
+            this.lbIDProg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnRegistrarVenda
             // 
             this.btnRegistrarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarVenda.Location = new System.Drawing.Point(316, 605);
+            this.btnRegistrarVenda.Location = new System.Drawing.Point(56, 643);
             this.btnRegistrarVenda.Name = "btnRegistrarVenda";
             this.btnRegistrarVenda.Size = new System.Drawing.Size(153, 25);
             this.btnRegistrarVenda.TabIndex = 28;
@@ -71,7 +75,7 @@ namespace Projeto_Facul.Resources
             this.LbPesquisarFunc.BackColor = System.Drawing.Color.Transparent;
             this.LbPesquisarFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LbPesquisarFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbPesquisarFunc.Location = new System.Drawing.Point(17, 131);
+            this.LbPesquisarFunc.Location = new System.Drawing.Point(8, 133);
             this.LbPesquisarFunc.Name = "LbPesquisarFunc";
             this.LbPesquisarFunc.Size = new System.Drawing.Size(201, 25);
             this.LbPesquisarFunc.TabIndex = 26;
@@ -92,9 +96,9 @@ namespace Projeto_Facul.Resources
             // CBoxCliente
             // 
             this.CBoxCliente.FormattingEnabled = true;
-            this.CBoxCliente.Location = new System.Drawing.Point(224, 135);
+            this.CBoxCliente.Location = new System.Drawing.Point(215, 137);
             this.CBoxCliente.Name = "CBoxCliente";
-            this.CBoxCliente.Size = new System.Drawing.Size(456, 21);
+            this.CBoxCliente.Size = new System.Drawing.Size(399, 21);
             this.CBoxCliente.TabIndex = 30;
             // 
             // lbEnderecoConCli
@@ -115,7 +119,7 @@ namespace Projeto_Facul.Resources
             this.lbProg.BackColor = System.Drawing.Color.Transparent;
             this.lbProg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbProg.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbProg.Location = new System.Drawing.Point(60, 561);
+            this.lbProg.Location = new System.Drawing.Point(21, 551);
             this.lbProg.Name = "lbProg";
             this.lbProg.Size = new System.Drawing.Size(158, 25);
             this.lbProg.TabIndex = 33;
@@ -124,7 +128,7 @@ namespace Projeto_Facul.Resources
             // CBoxProg
             // 
             this.CBoxProg.FormattingEnabled = true;
-            this.CBoxProg.Location = new System.Drawing.Point(224, 561);
+            this.CBoxProg.Location = new System.Drawing.Point(185, 551);
             this.CBoxProg.Name = "CBoxProg";
             this.CBoxProg.Size = new System.Drawing.Size(280, 21);
             this.CBoxProg.TabIndex = 34;
@@ -135,7 +139,7 @@ namespace Projeto_Facul.Resources
             this.lbValorProgVenda.BackColor = System.Drawing.Color.Transparent;
             this.lbValorProgVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbValorProgVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbValorProgVenda.Location = new System.Drawing.Point(526, 557);
+            this.lbValorProgVenda.Location = new System.Drawing.Point(24, 593);
             this.lbValorProgVenda.Name = "lbValorProgVenda";
             this.lbValorProgVenda.Size = new System.Drawing.Size(74, 25);
             this.lbValorProgVenda.TabIndex = 36;
@@ -144,7 +148,7 @@ namespace Projeto_Facul.Resources
             // btnRegistrarCli
             // 
             this.btnRegistrarCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarCli.Location = new System.Drawing.Point(686, 135);
+            this.btnRegistrarCli.Location = new System.Drawing.Point(649, 179);
             this.btnRegistrarCli.Name = "btnRegistrarCli";
             this.btnRegistrarCli.Size = new System.Drawing.Size(111, 25);
             this.btnRegistrarCli.TabIndex = 37;
@@ -275,10 +279,50 @@ namespace Projeto_Facul.Resources
             // CBoxValorProgVenda
             // 
             this.CBoxValorProgVenda.FormattingEnabled = true;
-            this.CBoxValorProgVenda.Location = new System.Drawing.Point(606, 557);
+            this.CBoxValorProgVenda.Location = new System.Drawing.Point(104, 593);
             this.CBoxValorProgVenda.Name = "CBoxValorProgVenda";
             this.CBoxValorProgVenda.Size = new System.Drawing.Size(121, 21);
             this.CBoxValorProgVenda.TabIndex = 50;
+            // 
+            // lbIdCliVen
+            // 
+            this.lbIdCliVen.AutoSize = true;
+            this.lbIdCliVen.BackColor = System.Drawing.Color.Transparent;
+            this.lbIdCliVen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbIdCliVen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIdCliVen.Location = new System.Drawing.Point(615, 137);
+            this.lbIdCliVen.Name = "lbIdCliVen";
+            this.lbIdCliVen.Size = new System.Drawing.Size(115, 25);
+            this.lbIdCliVen.TabIndex = 51;
+            this.lbIdCliVen.Text = "ID Cliente";
+            // 
+            // CBoxIDCli
+            // 
+            this.CBoxIDCli.FormattingEnabled = true;
+            this.CBoxIDCli.Location = new System.Drawing.Point(736, 139);
+            this.CBoxIDCli.Name = "CBoxIDCli";
+            this.CBoxIDCli.Size = new System.Drawing.Size(52, 21);
+            this.CBoxIDCli.TabIndex = 52;
+            // 
+            // CBoxIDProg
+            // 
+            this.CBoxIDProg.FormattingEnabled = true;
+            this.CBoxIDProg.Location = new System.Drawing.Point(567, 551);
+            this.CBoxIDProg.Name = "CBoxIDProg";
+            this.CBoxIDProg.Size = new System.Drawing.Size(52, 21);
+            this.CBoxIDProg.TabIndex = 54;
+            // 
+            // lbIDProg
+            // 
+            this.lbIDProg.AutoSize = true;
+            this.lbIDProg.BackColor = System.Drawing.Color.Transparent;
+            this.lbIDProg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbIDProg.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIDProg.Location = new System.Drawing.Point(471, 551);
+            this.lbIDProg.Name = "lbIDProg";
+            this.lbIDProg.Size = new System.Drawing.Size(90, 25);
+            this.lbIDProg.TabIndex = 53;
+            this.lbIDProg.Text = "ID Prog";
             // 
             // FRMAtendimento
             // 
@@ -287,6 +331,10 @@ namespace Projeto_Facul.Resources
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 680);
+            this.Controls.Add(this.CBoxIDProg);
+            this.Controls.Add(this.lbIDProg);
+            this.Controls.Add(this.CBoxIDCli);
+            this.Controls.Add(this.lbIdCliVen);
             this.Controls.Add(this.CBoxValorProgVenda);
             this.Controls.Add(this.lbComplemento);
             this.Controls.Add(this.lbCidade);
@@ -344,5 +392,9 @@ namespace Projeto_Facul.Resources
         private System.Windows.Forms.Label lbCidade;
         private System.Windows.Forms.Label lbComplemento;
         private System.Windows.Forms.ComboBox CBoxValorProgVenda;
+        private System.Windows.Forms.Label lbIdCliVen;
+        private System.Windows.Forms.ComboBox CBoxIDCli;
+        private System.Windows.Forms.ComboBox CBoxIDProg;
+        private System.Windows.Forms.Label lbIDProg;
     }
 }

@@ -143,7 +143,7 @@ namespace Projeto_Facul
                 MessageBox.Show("Por favor insira uma Complemento", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            //42601 syntax error at or near ")"
+            
 
 
 
