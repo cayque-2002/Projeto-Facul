@@ -44,22 +44,23 @@ namespace Projeto_Facul
             con = new NpgsqlConnection(consString);
 
             con.Open();
-            string queryChamado = "select idchamado, idcli_ch, clientes.nome_cli, idserv_ch, servicos.nome_serv," +
-                "contratos.idcontrato, situacao_ch, descricao_ch " +
-                "from chamados " +
-                "left join clientes  on idcli = idcli_ch " +
-                "left join servicos  on idserv = idserv_ch" +
-                "left join contratos on idcliente = idcli" +
-                "where nome_cli ilike  '%"+TBoxChamadoPesq.Text+"%'";
+            string queryChamado = "select chamados.idchamado, chamados.idcli_ch, chamados.idserv_ch, " +
+                "chamados.situacao_ch, chamados.descricao_ch, " +
+                "servicos.nome_serv, contratos.idcontrato, clientes.nome_cli " +
+                "from chamados chamados " +
+                "left join clientes clientes  on clientes.idcli = idcli_ch " +
+                "left join servicos servicos on servicos.idserv = idserv_ch " +
+                "left join contratos contratos on contratos.idcliente = clientes.idcli " +
+                "where clientes.nome_cli ilike  '%"+TBoxChamadoPesq.Text+"%'";
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(queryChamado, con);
             //NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
             DataTable dt = new DataTable();
 
-            {
-                da.Fill(dt);
+
+            da.Fill(dt);
 
                 dataGVchamados.DataSource = dt;
-            }
+            
 
             con.Close();
 

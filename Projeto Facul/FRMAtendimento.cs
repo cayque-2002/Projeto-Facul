@@ -40,6 +40,8 @@ namespace Projeto_Facul.Resources
             CBoxComplementoCon.Text = "";
             CBoxProg.Text = "";
             CBoxValorProgVenda.Text = "";
+            CBoxIDCli.Text = "";
+            CBoxIDProg.Text = "";
         }
         private void loadData(string keyword)
         {

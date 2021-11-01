@@ -72,9 +72,9 @@ namespace Projeto_Facul
             // 
             this.dataGVchamados.AllowDrop = true;
             this.dataGVchamados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGVchamados.Location = new System.Drawing.Point(105, 187);
+            this.dataGVchamados.Location = new System.Drawing.Point(12, 187);
             this.dataGVchamados.Name = "dataGVchamados";
-            this.dataGVchamados.Size = new System.Drawing.Size(607, 150);
+            this.dataGVchamados.Size = new System.Drawing.Size(775, 150);
             this.dataGVchamados.TabIndex = 19;
             // 
             // lbTitTecnico
@@ -106,7 +106,6 @@ namespace Projeto_Facul
             this.Name = "FRMTecnico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AGGE - Tecnico";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRMTecnico_FormClosing);
             this.Load += new System.EventHandler(this.FRMTecnico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGVchamados)).EndInit();
