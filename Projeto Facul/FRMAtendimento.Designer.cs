@@ -57,6 +57,7 @@ namespace Projeto_Facul.Resources
             this.CBoxIDProg = new System.Windows.Forms.ComboBox();
             this.lbIDProg = new System.Windows.Forms.Label();
             this.btnAbrirChamado = new System.Windows.Forms.Button();
+            this.btnAtualizarCon = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRegistrarVenda
@@ -328,13 +329,24 @@ namespace Projeto_Facul.Resources
             // btnAbrirChamado
             // 
             this.btnAbrirChamado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbrirChamado.Location = new System.Drawing.Point(332, 643);
+            this.btnAbrirChamado.Location = new System.Drawing.Point(607, 643);
             this.btnAbrirChamado.Name = "btnAbrirChamado";
             this.btnAbrirChamado.Size = new System.Drawing.Size(153, 25);
             this.btnAbrirChamado.TabIndex = 55;
             this.btnAbrirChamado.Text = "Abrir Chamado";
             this.btnAbrirChamado.UseVisualStyleBackColor = true;
             this.btnAbrirChamado.Click += new System.EventHandler(this.btnAbrirChamado_Click);
+            // 
+            // btnAtualizarCon
+            // 
+            this.btnAtualizarCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarCon.Location = new System.Drawing.Point(344, 643);
+            this.btnAtualizarCon.Name = "btnAtualizarCon";
+            this.btnAtualizarCon.Size = new System.Drawing.Size(153, 25);
+            this.btnAtualizarCon.TabIndex = 56;
+            this.btnAtualizarCon.Text = "Atualizar Contrato";
+            this.btnAtualizarCon.UseVisualStyleBackColor = true;
+            this.btnAtualizarCon.Click += new System.EventHandler(this.btnAtualizarCon_Click);
             // 
             // FRMAtendimento
             // 
@@ -343,6 +355,7 @@ namespace Projeto_Facul.Resources
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 680);
+            this.Controls.Add(this.btnAtualizarCon);
             this.Controls.Add(this.btnAbrirChamado);
             this.Controls.Add(this.CBoxIDProg);
             this.Controls.Add(this.lbIDProg);
@@ -410,5 +423,6 @@ namespace Projeto_Facul.Resources
         private System.Windows.Forms.ComboBox CBoxIDProg;
         private System.Windows.Forms.Label lbIDProg;
         private System.Windows.Forms.Button btnAbrirChamado;
+        private System.Windows.Forms.Button btnAtualizarCon;
     }
 }

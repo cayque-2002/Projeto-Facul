@@ -228,6 +228,70 @@ namespace Projeto_Facul.Resources
             _f10.ShowDialog();
             //Hide();
         }
+
+        private void btnAtualizarCon_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(CBoxCliente.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira um Cliente", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxTipoLogCon.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira um Tipo de Logradouro", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxLogradouroCon.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira um Logradouro", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxNumeroCon.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira um Número de residência", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxBairroCon.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira um Bairro", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxCidadeCon.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira uma Cidade", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxComplementoCon.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira um Complemento de Endereço", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxProg.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira uma Programação", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (string.IsNullOrEmpty(CBoxValorProgVenda.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira um Valor de Programação", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+
+            Program.sql = "update contratos set idprogramacao = @idprogramacao, tipo_logradouro_ct = @tipo_logradouro_ct, " +
+                "logradouro_ct = @logradouro_ct, numero_residencia_ct = @numero_residencia_ct, bairro_cli_ct = @bairro_cli_ct, " +
+                "cidade_ct = @cidade_ct, complemento_endereco_ct = @complemento_endereco_ct " +
+                "where idcliente = @idcliente";
+
+            executa(Program.sql, "Alterar");
+
+            MessageBox.Show("Cadastro salvo.", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+            loadData("");
+
+            resetMe();
+        }
     }
     }
         

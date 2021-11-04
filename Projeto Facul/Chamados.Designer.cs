@@ -157,7 +157,7 @@ namespace Projeto_Facul
             "Atendido"});
             this.CboxSituaCh.Location = new System.Drawing.Point(167, 261);
             this.CboxSituaCh.Name = "CboxSituaCh";
-            this.CboxSituaCh.Size = new System.Drawing.Size(46, 21);
+            this.CboxSituaCh.Size = new System.Drawing.Size(165, 21);
             this.CboxSituaCh.TabIndex = 64;
             // 
             // lbSituacaoCh

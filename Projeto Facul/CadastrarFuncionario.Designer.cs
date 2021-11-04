@@ -203,7 +203,7 @@ namespace Projeto_Facul
             this.lbCadFunc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbCadFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbCadFunc.Font = new System.Drawing.Font("Century", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCadFunc.Location = new System.Drawing.Point(96, 22);
+            this.lbCadFunc.Location = new System.Drawing.Point(131, 21);
             this.lbCadFunc.Name = "lbCadFunc";
             this.lbCadFunc.Size = new System.Drawing.Size(554, 59);
             this.lbCadFunc.TabIndex = 22;
