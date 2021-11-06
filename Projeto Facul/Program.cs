@@ -71,6 +71,17 @@ namespace Projeto_Facul
 
         }
 
+      /*  public class criptografar
+        {
+
+            string client = new RestClient('http://ll.conteumahistoria.com/util/encrypt?text=123');
+            client.Timeout = -1;
+            var request = new RestRequest(Method.GET);
+            IRestResponse response = client.Execute(request);
+            Console.WriteLine(response.Content);
+
+        }
+      */
     }
 }
     

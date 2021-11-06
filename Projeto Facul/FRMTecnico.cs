@@ -70,6 +70,7 @@ namespace Projeto_Facul
             Program.cmd.Parameters.Clear();
             Program.cmd.Parameters.AddWithValue("idchamado", (Convert.ToInt32(CBoxIDChamado.Text.Trim())));
             Program.cmd.Parameters.AddWithValue("atendimento_tec", CBoxAtendimentoTec.Text.Trim());
+            Program.cmd.Parameters.AddWithValue("situacao_ch", CBoxSituaCh.Text.Trim());
 
         }
             private void btnPesquisarCh_Click(object sender, EventArgs e)
@@ -79,7 +80,7 @@ namespace Projeto_Facul
 
             con.Open();
             string queryChamado = "select chamados.idchamado, chamados.idcli_ch, chamados.idserv_ch, " +
-                "chamados.situacao_ch, chamados.descricao_ch, " +
+                "chamados.situacao_ch, chamados.descricao_ch, chamados.atendimento_tec, " +
                 "servicos.nome_serv, contratos.idcontrato, clientes.nome_cli " +
                 "from chamados chamados " +
                 "left join clientes clientes  on clientes.idcli = idcli_ch " +
@@ -143,7 +144,7 @@ namespace Projeto_Facul
                 return;
             }
 
-            Program.sql = "update chamados set atendimento_tec = @atendimento_tec " +
+            Program.sql = "update chamados set situacao_ch = @situacao_ch, atendimento_tec = @atendimento_tec " +
                 "where idchamado = @idchamado";
 
             executa(Program.sql, "Alterar");

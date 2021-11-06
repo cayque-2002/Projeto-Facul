@@ -21,7 +21,8 @@ namespace Projeto_Facul
              "postgres", "abc123");
         
         public NpgsqlConnection con;
-        
+
+
 
         public FRM_AGGE()
         {
