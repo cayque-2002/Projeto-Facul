@@ -40,8 +40,9 @@ namespace Projeto_Facul.Resources
             CBoxComplementoCon.Text = "";
             CBoxProg.Text = "";
             CBoxValorProgVenda.Text = "";
-            CBoxIDCli.Text = "";
+            CBoxIDCt.Text = "";
             CBoxIDProg.Text = "";
+            CboxIDCli.Text = "";
         }
         private void loadData(string keyword)
         {
@@ -59,7 +60,7 @@ namespace Projeto_Facul.Resources
         {
 
             Program.cmd.Parameters.Clear();
-            Program.cmd.Parameters.AddWithValue("idcliente", (Convert.ToInt32(CBoxIDCli.Text.Trim())));
+            Program.cmd.Parameters.AddWithValue("idcli", (Convert.ToInt32(CboxIDCli.Text.Trim())));
             Program.cmd.Parameters.AddWithValue("idprogramacao", (Convert.ToInt32(CBoxIDProg.Text.Trim())));
             Program.cmd.Parameters.AddWithValue("tipo_logradouro_ct", CBoxTipoLogCon.Text.Trim());
             Program.cmd.Parameters.AddWithValue("logradouro_ct", CBoxLogradouroCon.Text.Trim());
@@ -85,69 +86,55 @@ namespace Projeto_Facul.Resources
 
         private void FRMAtendimento_Load(object sender, EventArgs e)
         {
+
             con = new NpgsqlConnection(consString);
 
             con.Open();
-            string queryNome = "Select * from clientes";
-            NpgsqlDataAdapter daNome = new NpgsqlDataAdapter(queryNome, con);
+            string queryCliCon = "Select * from contratos " +
+                "left join clientes on idcli = idcliente " +
+                "left join programacoes on idprog = idprogramacao" +
+                " where idcli = @idcli";
+            NpgsqlDataAdapter daCliCon = new NpgsqlDataAdapter(queryCliCon, con);
             //NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
-            DataTable dtNome = new DataTable();
-            daNome.Fill(dtNome);
+            DataTable dtCliCon = new DataTable();
+            daCliCon.Fill(dtCliCon);
+            //carregar os contratos de pertencentes ao cliente where id cliente = 
+            CboxIDCli.DisplayMember = "idcli";
+            CboxIDCli.DataSource = dtCliCon;
+
             CBoxCliente.DisplayMember = "nome_cli";
-            CBoxCliente.DataSource = dtNome;
-            
-            CBoxIDCli.DisplayMember = "idcli";
-            CBoxIDCli.DataSource = dtNome;
+            CBoxCliente.DataSource = dtCliCon;
 
-            con.Close();
+            CBoxIDCt.DisplayMember = "idcontrato";
+            CBoxIDCt.DataSource = dtCliCon;
 
-            con = new NpgsqlConnection(consString);
-
-            con.Open();
-            string queryEndereco = "select tipo_logradouro_cli, " +
-                "logradouro_cli, numero_residencia, bairro_cli, cidade_cli, " +
-                "complemento_endereco_cli from clientes where nome_cli = '" + CBoxCliente.SelectedItem + "'";
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(queryNome, con);
-            //NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
-            DataTable dt = new DataTable();
-
-            da.Fill(dt);
-            CBoxTipoLogCon.DisplayMember = "tipo_logradouro_cli"; /* + "logradouro_cli" + "numero_residencia" +
+            CBoxTipoLogCon.DisplayMember = "tipo_logradouro_ct"; /* + "logradouro_cli" + "numero_residencia" +
                 "bairro_cli" + "cidade_cli" + "complemento_endereco_cli";*/
-            CBoxTipoLogCon.DataSource = dt;
+            CBoxTipoLogCon.DataSource = dtCliCon;
 
-            CBoxLogradouroCon.DisplayMember = "logradouro_cli";
-            CBoxLogradouroCon.DataSource = dt;
+            CBoxLogradouroCon.DisplayMember = "logradouro_ct";
+            CBoxLogradouroCon.DataSource = dtCliCon;
 
-            CBoxNumeroCon.DisplayMember = "numero_residencia";
-            CBoxNumeroCon.DataSource = dt;
+            CBoxNumeroCon.DisplayMember = "numero_residencia_ct";
+            CBoxNumeroCon.DataSource = dtCliCon;
 
-            CBoxBairroCon.DisplayMember = "bairro_cli";
-            CBoxBairroCon.DataSource = dt;
+            CBoxBairroCon.DisplayMember = "bairro_cli_ct";
+            CBoxBairroCon.DataSource = dtCliCon;
 
-            CBoxCidadeCon.DisplayMember = "cidade_cli";
-            CBoxCidadeCon.DataSource = dt;
+            CBoxCidadeCon.DisplayMember = "cidade_ct";
+            CBoxCidadeCon.DataSource = dtCliCon;
 
-            CBoxComplementoCon.DisplayMember = "complemento_endereco_cli";
-            CBoxComplementoCon.DataSource = dt;
-            con.Close();
-
-            con = new NpgsqlConnection(consString);
-
-            con.Open();
-            string queryProg = "Select * from programacoes";
-            NpgsqlDataAdapter daProg = new NpgsqlDataAdapter(queryProg, con);
-            //NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
-            DataTable dtProg = new DataTable();
-            daProg.Fill(dtProg);
+            CBoxComplementoCon.DisplayMember = "complemento_endereco_ct";
+            CBoxComplementoCon.DataSource = dtCliCon;
+        
             CBoxProg.DisplayMember = "nome_prog";
-            CBoxProg.DataSource = dtProg;
+            CBoxProg.DataSource = dtCliCon;
 
             CBoxIDProg.DisplayMember = "idprog";
-            CBoxIDProg.DataSource = dtProg;
+            CBoxIDProg.DataSource = dtCliCon;
 
             CBoxValorProgVenda.DisplayMember = "valor_prog";
-            CBoxValorProgVenda.DataSource = dtProg;
+            CBoxValorProgVenda.DataSource = dtCliCon;
             con.Close();
 
             loadData("");
