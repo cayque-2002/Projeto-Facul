@@ -93,7 +93,7 @@ namespace Projeto_Facul.Resources
             string queryCliCon = "Select * from contratos " +
                 "left join clientes on idcli = idcliente " +
                 "left join programacoes on idprog = idprogramacao" +
-                " where idcli = @idcli";
+                " where idcli = 1";
             NpgsqlDataAdapter daCliCon = new NpgsqlDataAdapter(queryCliCon, con);
             //NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
             DataTable dtCliCon = new DataTable();
