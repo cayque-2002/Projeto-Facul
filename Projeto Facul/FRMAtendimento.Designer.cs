@@ -58,10 +58,11 @@ namespace Projeto_Facul.Resources
             this.CboxIDCli = new System.Windows.Forms.ComboBox();
             this.lbIDCli = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuFBtnBoleto = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFbtnAbrirChamado = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFbtnAtualizarCon = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFbtnRegistrarCli = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFbtnAbrirChamado = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFBtnBoleto = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.BtnPesqContratos = new System.Windows.Forms.Button();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -323,7 +324,7 @@ namespace Projeto_Facul.Resources
             // CboxIDCli
             // 
             this.CboxIDCli.FormattingEnabled = true;
-            this.CboxIDCli.Location = new System.Drawing.Point(902, 146);
+            this.CboxIDCli.Location = new System.Drawing.Point(885, 144);
             this.CboxIDCli.Name = "CboxIDCli";
             this.CboxIDCli.Size = new System.Drawing.Size(52, 21);
             this.CboxIDCli.TabIndex = 58;
@@ -358,6 +359,80 @@ namespace Projeto_Facul.Resources
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(168, 680);
             this.bunifuGradientPanel1.TabIndex = 59;
+            // 
+            // bunifuFBtnBoleto
+            // 
+            this.bunifuFBtnBoleto.Activecolor = System.Drawing.Color.Transparent;
+            this.bunifuFBtnBoleto.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFBtnBoleto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFBtnBoleto.BorderRadius = 0;
+            this.bunifuFBtnBoleto.ButtonText = "Lançar boleto";
+            this.bunifuFBtnBoleto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFBtnBoleto.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFBtnBoleto.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFBtnBoleto.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFBtnBoleto.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFBtnBoleto.Iconimage")));
+            this.bunifuFBtnBoleto.Iconimage_right = null;
+            this.bunifuFBtnBoleto.Iconimage_right_Selected = null;
+            this.bunifuFBtnBoleto.Iconimage_Selected = null;
+            this.bunifuFBtnBoleto.IconMarginLeft = 0;
+            this.bunifuFBtnBoleto.IconMarginRight = 0;
+            this.bunifuFBtnBoleto.IconRightVisible = true;
+            this.bunifuFBtnBoleto.IconRightZoom = 0D;
+            this.bunifuFBtnBoleto.IconVisible = true;
+            this.bunifuFBtnBoleto.IconZoom = 90D;
+            this.bunifuFBtnBoleto.IsTab = false;
+            this.bunifuFBtnBoleto.Location = new System.Drawing.Point(0, 561);
+            this.bunifuFBtnBoleto.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFBtnBoleto.Name = "bunifuFBtnBoleto";
+            this.bunifuFBtnBoleto.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFBtnBoleto.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFBtnBoleto.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFBtnBoleto.selected = false;
+            this.bunifuFBtnBoleto.Size = new System.Drawing.Size(168, 33);
+            this.bunifuFBtnBoleto.TabIndex = 4;
+            this.bunifuFBtnBoleto.Text = "Lançar boleto";
+            this.bunifuFBtnBoleto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFBtnBoleto.Textcolor = System.Drawing.Color.White;
+            this.bunifuFBtnBoleto.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFBtnBoleto.Click += new System.EventHandler(this.bunifuFBtnBoleto_Click);
+            // 
+            // bunifuFbtnAbrirChamado
+            // 
+            this.bunifuFbtnAbrirChamado.Activecolor = System.Drawing.Color.Transparent;
+            this.bunifuFbtnAbrirChamado.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFbtnAbrirChamado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFbtnAbrirChamado.BorderRadius = 0;
+            this.bunifuFbtnAbrirChamado.ButtonText = "Abrir chamado";
+            this.bunifuFbtnAbrirChamado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFbtnAbrirChamado.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFbtnAbrirChamado.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFbtnAbrirChamado.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFbtnAbrirChamado.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFbtnAbrirChamado.Iconimage")));
+            this.bunifuFbtnAbrirChamado.Iconimage_right = null;
+            this.bunifuFbtnAbrirChamado.Iconimage_right_Selected = null;
+            this.bunifuFbtnAbrirChamado.Iconimage_Selected = null;
+            this.bunifuFbtnAbrirChamado.IconMarginLeft = 0;
+            this.bunifuFbtnAbrirChamado.IconMarginRight = 0;
+            this.bunifuFbtnAbrirChamado.IconRightVisible = true;
+            this.bunifuFbtnAbrirChamado.IconRightZoom = 0D;
+            this.bunifuFbtnAbrirChamado.IconVisible = true;
+            this.bunifuFbtnAbrirChamado.IconZoom = 90D;
+            this.bunifuFbtnAbrirChamado.IsTab = false;
+            this.bunifuFbtnAbrirChamado.Location = new System.Drawing.Point(0, 429);
+            this.bunifuFbtnAbrirChamado.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFbtnAbrirChamado.Name = "bunifuFbtnAbrirChamado";
+            this.bunifuFbtnAbrirChamado.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFbtnAbrirChamado.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFbtnAbrirChamado.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFbtnAbrirChamado.selected = false;
+            this.bunifuFbtnAbrirChamado.Size = new System.Drawing.Size(168, 33);
+            this.bunifuFbtnAbrirChamado.TabIndex = 3;
+            this.bunifuFbtnAbrirChamado.Text = "Abrir chamado";
+            this.bunifuFbtnAbrirChamado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFbtnAbrirChamado.Textcolor = System.Drawing.Color.White;
+            this.bunifuFbtnAbrirChamado.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFbtnAbrirChamado.Click += new System.EventHandler(this.bunifuFbtnAbrirChamado_Click);
             // 
             // bunifuFbtnAtualizarCon
             // 
@@ -433,78 +508,15 @@ namespace Projeto_Facul.Resources
             this.bunifuFbtnRegistrarCli.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFbtnRegistrarCli.Click += new System.EventHandler(this.bunifuFbtnRegistrarCli_Click);
             // 
-            // bunifuFbtnAbrirChamado
+            // BtnPesqContratos
             // 
-            this.bunifuFbtnAbrirChamado.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFbtnAbrirChamado.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFbtnAbrirChamado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFbtnAbrirChamado.BorderRadius = 0;
-            this.bunifuFbtnAbrirChamado.ButtonText = "Abrir chamado";
-            this.bunifuFbtnAbrirChamado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFbtnAbrirChamado.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFbtnAbrirChamado.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFbtnAbrirChamado.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFbtnAbrirChamado.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFbtnAbrirChamado.Iconimage")));
-            this.bunifuFbtnAbrirChamado.Iconimage_right = null;
-            this.bunifuFbtnAbrirChamado.Iconimage_right_Selected = null;
-            this.bunifuFbtnAbrirChamado.Iconimage_Selected = null;
-            this.bunifuFbtnAbrirChamado.IconMarginLeft = 0;
-            this.bunifuFbtnAbrirChamado.IconMarginRight = 0;
-            this.bunifuFbtnAbrirChamado.IconRightVisible = true;
-            this.bunifuFbtnAbrirChamado.IconRightZoom = 0D;
-            this.bunifuFbtnAbrirChamado.IconVisible = true;
-            this.bunifuFbtnAbrirChamado.IconZoom = 90D;
-            this.bunifuFbtnAbrirChamado.IsTab = false;
-            this.bunifuFbtnAbrirChamado.Location = new System.Drawing.Point(0, 429);
-            this.bunifuFbtnAbrirChamado.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFbtnAbrirChamado.Name = "bunifuFbtnAbrirChamado";
-            this.bunifuFbtnAbrirChamado.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFbtnAbrirChamado.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFbtnAbrirChamado.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFbtnAbrirChamado.selected = false;
-            this.bunifuFbtnAbrirChamado.Size = new System.Drawing.Size(168, 33);
-            this.bunifuFbtnAbrirChamado.TabIndex = 3;
-            this.bunifuFbtnAbrirChamado.Text = "Abrir chamado";
-            this.bunifuFbtnAbrirChamado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFbtnAbrirChamado.Textcolor = System.Drawing.Color.White;
-            this.bunifuFbtnAbrirChamado.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFbtnAbrirChamado.Click += new System.EventHandler(this.bunifuFbtnAbrirChamado_Click);
-            // 
-            // bunifuFBtnBoleto
-            // 
-            this.bunifuFBtnBoleto.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFBtnBoleto.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFBtnBoleto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFBtnBoleto.BorderRadius = 0;
-            this.bunifuFBtnBoleto.ButtonText = "Lançar boleto";
-            this.bunifuFBtnBoleto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFBtnBoleto.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFBtnBoleto.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFBtnBoleto.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFBtnBoleto.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFBtnBoleto.Iconimage")));
-            this.bunifuFBtnBoleto.Iconimage_right = null;
-            this.bunifuFBtnBoleto.Iconimage_right_Selected = null;
-            this.bunifuFBtnBoleto.Iconimage_Selected = null;
-            this.bunifuFBtnBoleto.IconMarginLeft = 0;
-            this.bunifuFBtnBoleto.IconMarginRight = 0;
-            this.bunifuFBtnBoleto.IconRightVisible = true;
-            this.bunifuFBtnBoleto.IconRightZoom = 0D;
-            this.bunifuFBtnBoleto.IconVisible = true;
-            this.bunifuFBtnBoleto.IconZoom = 90D;
-            this.bunifuFBtnBoleto.IsTab = false;
-            this.bunifuFBtnBoleto.Location = new System.Drawing.Point(0, 561);
-            this.bunifuFBtnBoleto.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFBtnBoleto.Name = "bunifuFBtnBoleto";
-            this.bunifuFBtnBoleto.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFBtnBoleto.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFBtnBoleto.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFBtnBoleto.selected = false;
-            this.bunifuFBtnBoleto.Size = new System.Drawing.Size(168, 33);
-            this.bunifuFBtnBoleto.TabIndex = 4;
-            this.bunifuFBtnBoleto.Text = "Lançar boleto";
-            this.bunifuFBtnBoleto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFBtnBoleto.Textcolor = System.Drawing.Color.White;
-            this.bunifuFBtnBoleto.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPesqContratos.BackgroundImage = global::Projeto_Facul.Properties.Resources.lupas__1_;
+            this.BtnPesqContratos.Location = new System.Drawing.Point(943, 140);
+            this.BtnPesqContratos.Name = "BtnPesqContratos";
+            this.BtnPesqContratos.Size = new System.Drawing.Size(37, 25);
+            this.BtnPesqContratos.TabIndex = 60;
+            this.BtnPesqContratos.UseVisualStyleBackColor = true;
+            this.BtnPesqContratos.Click += new System.EventHandler(this.BtnPesqContratos_Click);
             // 
             // FRMAtendimento
             // 
@@ -513,6 +525,7 @@ namespace Projeto_Facul.Resources
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(989, 680);
+            this.Controls.Add(this.BtnPesqContratos);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.CboxIDCli);
             this.Controls.Add(this.lbIDCli);
@@ -587,5 +600,6 @@ namespace Projeto_Facul.Resources
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFbtnAtualizarCon;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFbtnRegistrarCli;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFBtnBoleto;
+        private System.Windows.Forms.Button BtnPesqContratos;
     }
 }

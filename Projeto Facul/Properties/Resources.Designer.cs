@@ -93,6 +93,26 @@ namespace Projeto_Facul.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lupas {
+            get {
+                object obj = ResourceManager.GetObject("lupas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lupas__1_ {
+            get {
+                object obj = ResourceManager.GetObject("lupas (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2021_10_20_at_8_12_17_PM {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2021-10-20 at 8.12.17 PM", resourceCulture);

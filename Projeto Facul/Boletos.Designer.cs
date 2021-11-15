@@ -54,9 +54,14 @@ namespace Projeto_Facul
             this.CBoxParcela = new System.Windows.Forms.ComboBox();
             this.lbParcela = new System.Windows.Forms.Label();
             this.lbDataVenc = new System.Windows.Forms.Label();
-            this.lbDataEmi = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.MEDTDataVencimento = new System.Windows.Forms.MaskedTextBox();
+            this.CBoxIDCli = new System.Windows.Forms.ComboBox();
+            this.LbIDCliBol = new System.Windows.Forms.Label();
+            this.CboxNumDoc = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BtnPesqConBol = new System.Windows.Forms.Button();
+            this.CBoxSituacaoBol = new System.Windows.Forms.ComboBox();
+            this.lbSituacaoBol = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVBoletos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,13 +83,13 @@ namespace Projeto_Facul
             this.dataGVBoletos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGVBoletos.Location = new System.Drawing.Point(13, 468);
             this.dataGVBoletos.Name = "dataGVBoletos";
-            this.dataGVBoletos.Size = new System.Drawing.Size(775, 150);
+            this.dataGVBoletos.Size = new System.Drawing.Size(867, 150);
             this.dataGVBoletos.TabIndex = 51;
             // 
             // CboxIDCtBol
             // 
             this.CboxIDCtBol.FormattingEnabled = true;
-            this.CboxIDCtBol.Location = new System.Drawing.Point(733, 121);
+            this.CboxIDCtBol.Location = new System.Drawing.Point(167, 158);
             this.CboxIDCtBol.Name = "CboxIDCtBol";
             this.CboxIDCtBol.Size = new System.Drawing.Size(52, 21);
             this.CboxIDCtBol.TabIndex = 63;
@@ -95,7 +100,7 @@ namespace Projeto_Facul
             this.lbIDContrato.BackColor = System.Drawing.Color.Transparent;
             this.lbIDContrato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbIDContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIDContrato.Location = new System.Drawing.Point(589, 117);
+            this.lbIDContrato.Location = new System.Drawing.Point(23, 154);
             this.lbIDContrato.Name = "lbIDContrato";
             this.lbIDContrato.Size = new System.Drawing.Size(138, 25);
             this.lbIDContrato.TabIndex = 62;
@@ -124,7 +129,7 @@ namespace Projeto_Facul
             // CBoxIDProgBol
             // 
             this.CBoxIDProgBol.FormattingEnabled = true;
-            this.CBoxIDProgBol.Location = new System.Drawing.Point(635, 170);
+            this.CBoxIDProgBol.Location = new System.Drawing.Point(818, 198);
             this.CBoxIDProgBol.Name = "CBoxIDProgBol";
             this.CBoxIDProgBol.Size = new System.Drawing.Size(52, 21);
             this.CBoxIDProgBol.TabIndex = 65;
@@ -135,7 +140,7 @@ namespace Projeto_Facul
             this.lbProgIDBol.BackColor = System.Drawing.Color.Transparent;
             this.lbProgIDBol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbProgIDBol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbProgIDBol.Location = new System.Drawing.Point(450, 166);
+            this.lbProgIDBol.Location = new System.Drawing.Point(633, 194);
             this.lbProgIDBol.Name = "lbProgIDBol";
             this.lbProgIDBol.Size = new System.Drawing.Size(187, 25);
             this.lbProgIDBol.TabIndex = 64;
@@ -144,7 +149,7 @@ namespace Projeto_Facul
             // CBoxProgBol
             // 
             this.CBoxProgBol.FormattingEnabled = true;
-            this.CBoxProgBol.Location = new System.Drawing.Point(182, 170);
+            this.CBoxProgBol.Location = new System.Drawing.Point(185, 200);
             this.CBoxProgBol.Name = "CBoxProgBol";
             this.CBoxProgBol.Size = new System.Drawing.Size(262, 21);
             this.CBoxProgBol.TabIndex = 67;
@@ -155,7 +160,7 @@ namespace Projeto_Facul
             this.LbProgBol.BackColor = System.Drawing.Color.Transparent;
             this.LbProgBol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LbProgBol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbProgBol.Location = new System.Drawing.Point(18, 164);
+            this.LbProgBol.Location = new System.Drawing.Point(21, 194);
             this.LbProgBol.Name = "LbProgBol";
             this.LbProgBol.Size = new System.Drawing.Size(158, 25);
             this.LbProgBol.TabIndex = 66;
@@ -164,7 +169,7 @@ namespace Projeto_Facul
             // CboxValorBol
             // 
             this.CboxValorBol.FormattingEnabled = true;
-            this.CboxValorBol.Location = new System.Drawing.Point(182, 215);
+            this.CboxValorBol.Location = new System.Drawing.Point(185, 245);
             this.CboxValorBol.Name = "CboxValorBol";
             this.CboxValorBol.Size = new System.Drawing.Size(89, 21);
             this.CboxValorBol.TabIndex = 69;
@@ -175,7 +180,7 @@ namespace Projeto_Facul
             this.lbValorBol.BackColor = System.Drawing.Color.Transparent;
             this.lbValorBol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbValorBol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbValorBol.Location = new System.Drawing.Point(23, 211);
+            this.lbValorBol.Location = new System.Drawing.Point(26, 241);
             this.lbValorBol.Name = "lbValorBol";
             this.lbValorBol.Size = new System.Drawing.Size(149, 25);
             this.lbValorBol.TabIndex = 68;
@@ -184,7 +189,7 @@ namespace Projeto_Facul
             // CBoxBanco
             // 
             this.CBoxBanco.FormattingEnabled = true;
-            this.CBoxBanco.Location = new System.Drawing.Point(383, 215);
+            this.CBoxBanco.Location = new System.Drawing.Point(708, 296);
             this.CBoxBanco.Name = "CBoxBanco";
             this.CBoxBanco.Size = new System.Drawing.Size(159, 21);
             this.CBoxBanco.TabIndex = 71;
@@ -195,7 +200,7 @@ namespace Projeto_Facul
             this.lbBanco.BackColor = System.Drawing.Color.Transparent;
             this.lbBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbBanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBanco.Location = new System.Drawing.Point(295, 211);
+            this.lbBanco.Location = new System.Drawing.Point(615, 292);
             this.lbBanco.Name = "lbBanco";
             this.lbBanco.Size = new System.Drawing.Size(92, 25);
             this.lbBanco.TabIndex = 70;
@@ -204,7 +209,7 @@ namespace Projeto_Facul
             // CBoxContaCredito
             // 
             this.CBoxContaCredito.FormattingEnabled = true;
-            this.CBoxContaCredito.Location = new System.Drawing.Point(193, 258);
+            this.CBoxContaCredito.Location = new System.Drawing.Point(185, 294);
             this.CBoxContaCredito.Name = "CBoxContaCredito";
             this.CBoxContaCredito.Size = new System.Drawing.Size(194, 21);
             this.CBoxContaCredito.TabIndex = 73;
@@ -215,7 +220,7 @@ namespace Projeto_Facul
             this.lbContaCredito.BackColor = System.Drawing.Color.Transparent;
             this.lbContaCredito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbContaCredito.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbContaCredito.Location = new System.Drawing.Point(23, 254);
+            this.lbContaCredito.Location = new System.Drawing.Point(15, 290);
             this.lbContaCredito.Name = "lbContaCredito";
             this.lbContaCredito.Size = new System.Drawing.Size(164, 25);
             this.lbContaCredito.TabIndex = 72;
@@ -224,7 +229,7 @@ namespace Projeto_Facul
             // CBoxAgencia
             // 
             this.CBoxAgencia.FormattingEnabled = true;
-            this.CBoxAgencia.Location = new System.Drawing.Point(648, 215);
+            this.CBoxAgencia.Location = new System.Drawing.Point(730, 247);
             this.CBoxAgencia.Name = "CBoxAgencia";
             this.CBoxAgencia.Size = new System.Drawing.Size(137, 21);
             this.CBoxAgencia.TabIndex = 75;
@@ -235,7 +240,7 @@ namespace Projeto_Facul
             this.lbAgencia.BackColor = System.Drawing.Color.Transparent;
             this.lbAgencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbAgencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAgencia.Location = new System.Drawing.Point(547, 211);
+            this.lbAgencia.Location = new System.Drawing.Point(629, 243);
             this.lbAgencia.Name = "lbAgencia";
             this.lbAgencia.Size = new System.Drawing.Size(104, 25);
             this.lbAgencia.TabIndex = 74;
@@ -244,27 +249,29 @@ namespace Projeto_Facul
             // btnRegistrarBoleto
             // 
             this.btnRegistrarBoleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarBoleto.Location = new System.Drawing.Point(28, 373);
+            this.btnRegistrarBoleto.Location = new System.Drawing.Point(26, 425);
             this.btnRegistrarBoleto.Name = "btnRegistrarBoleto";
             this.btnRegistrarBoleto.Size = new System.Drawing.Size(153, 25);
             this.btnRegistrarBoleto.TabIndex = 76;
             this.btnRegistrarBoleto.Text = "Registrar Boleto";
             this.btnRegistrarBoleto.UseVisualStyleBackColor = true;
+            this.btnRegistrarBoleto.Click += new System.EventHandler(this.btnRegistrarBoleto_Click);
             // 
             // BtnBaixarFatura
             // 
             this.BtnBaixarFatura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBaixarFatura.Location = new System.Drawing.Point(206, 373);
+            this.BtnBaixarFatura.Location = new System.Drawing.Point(204, 425);
             this.BtnBaixarFatura.Name = "BtnBaixarFatura";
             this.BtnBaixarFatura.Size = new System.Drawing.Size(153, 25);
             this.BtnBaixarFatura.TabIndex = 77;
             this.BtnBaixarFatura.Text = "Baixar Boleto";
             this.BtnBaixarFatura.UseVisualStyleBackColor = true;
+            this.BtnBaixarFatura.Click += new System.EventHandler(this.BtnBaixarFatura_Click);
             // 
             // BtnPesqFatura
             // 
             this.BtnPesqFatura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPesqFatura.Location = new System.Drawing.Point(606, 373);
+            this.BtnPesqFatura.Location = new System.Drawing.Point(714, 425);
             this.BtnPesqFatura.Name = "BtnPesqFatura";
             this.BtnPesqFatura.Size = new System.Drawing.Size(153, 25);
             this.BtnPesqFatura.TabIndex = 78;
@@ -274,7 +281,7 @@ namespace Projeto_Facul
             // CBoxParcela
             // 
             this.CBoxParcela.FormattingEnabled = true;
-            this.CBoxParcela.Location = new System.Drawing.Point(509, 260);
+            this.CBoxParcela.Location = new System.Drawing.Point(185, 337);
             this.CBoxParcela.Name = "CBoxParcela";
             this.CBoxParcela.Size = new System.Drawing.Size(194, 21);
             this.CBoxParcela.TabIndex = 80;
@@ -285,7 +292,7 @@ namespace Projeto_Facul
             this.lbParcela.BackColor = System.Drawing.Color.Transparent;
             this.lbParcela.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbParcela.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbParcela.Location = new System.Drawing.Point(404, 256);
+            this.lbParcela.Location = new System.Drawing.Point(80, 333);
             this.lbParcela.Name = "lbParcela";
             this.lbParcela.Size = new System.Drawing.Size(99, 25);
             this.lbParcela.TabIndex = 79;
@@ -297,39 +304,94 @@ namespace Projeto_Facul
             this.lbDataVenc.BackColor = System.Drawing.Color.Transparent;
             this.lbDataVenc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbDataVenc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDataVenc.Location = new System.Drawing.Point(404, 312);
+            this.lbDataVenc.Location = new System.Drawing.Point(21, 381);
             this.lbDataVenc.Name = "lbDataVenc";
             this.lbDataVenc.Size = new System.Drawing.Size(198, 25);
             this.lbDataVenc.TabIndex = 83;
             this.lbDataVenc.Text = "Data Vencimento:";
             // 
-            // lbDataEmi
+            // MEDTDataVencimento
             // 
-            this.lbDataEmi.AutoSize = true;
-            this.lbDataEmi.BackColor = System.Drawing.Color.Transparent;
-            this.lbDataEmi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbDataEmi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDataEmi.Location = new System.Drawing.Point(23, 310);
-            this.lbDataEmi.Name = "lbDataEmi";
-            this.lbDataEmi.Size = new System.Drawing.Size(164, 25);
-            this.lbDataEmi.TabIndex = 81;
-            this.lbDataEmi.Text = "Data Emissão:";
+            this.MEDTDataVencimento.Location = new System.Drawing.Point(225, 386);
+            this.MEDTDataVencimento.Mask = "00/00/0000";
+            this.MEDTDataVencimento.Name = "MEDTDataVencimento";
+            this.MEDTDataVencimento.Size = new System.Drawing.Size(100, 20);
+            this.MEDTDataVencimento.TabIndex = 85;
+            this.MEDTDataVencimento.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox1
+            // CBoxIDCli
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(206, 312);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 84;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.CBoxIDCli.FormattingEnabled = true;
+            this.CBoxIDCli.Location = new System.Drawing.Point(705, 121);
+            this.CBoxIDCli.Name = "CBoxIDCli";
+            this.CBoxIDCli.Size = new System.Drawing.Size(89, 21);
+            this.CBoxIDCli.TabIndex = 87;
             // 
-            // maskedTextBox2
+            // LbIDCliBol
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(635, 318);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox2.TabIndex = 85;
+            this.LbIDCliBol.AutoSize = true;
+            this.LbIDCliBol.BackColor = System.Drawing.Color.Transparent;
+            this.LbIDCliBol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LbIDCliBol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbIDCliBol.Location = new System.Drawing.Point(585, 119);
+            this.LbIDCliBol.Name = "LbIDCliBol";
+            this.LbIDCliBol.Size = new System.Drawing.Size(122, 25);
+            this.LbIDCliBol.TabIndex = 86;
+            this.LbIDCliBol.Text = "ID Cliente:";
+            // 
+            // CboxNumDoc
+            // 
+            this.CboxNumDoc.FormattingEnabled = true;
+            this.CboxNumDoc.Location = new System.Drawing.Point(688, 339);
+            this.CboxNumDoc.Name = "CboxNumDoc";
+            this.CboxNumDoc.Size = new System.Drawing.Size(179, 21);
+            this.CboxNumDoc.TabIndex = 89;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(467, 335);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(225, 25);
+            this.label1.TabIndex = 88;
+            this.label1.Text = "Número Documento:";
+            // 
+            // BtnPesqConBol
+            // 
+            this.BtnPesqConBol.BackgroundImage = global::Projeto_Facul.Properties.Resources.lupas__1_;
+            this.BtnPesqConBol.Location = new System.Drawing.Point(830, 117);
+            this.BtnPesqConBol.Name = "BtnPesqConBol";
+            this.BtnPesqConBol.Size = new System.Drawing.Size(37, 25);
+            this.BtnPesqConBol.TabIndex = 90;
+            this.BtnPesqConBol.UseVisualStyleBackColor = true;
+            this.BtnPesqConBol.Click += new System.EventHandler(this.BtnPesqConBol_Click);
+            // 
+            // CBoxSituacaoBol
+            // 
+            this.CBoxSituacaoBol.FormattingEnabled = true;
+            this.CBoxSituacaoBol.Items.AddRange(new object[] {
+            "Em aberto",
+            "Vencido",
+            "Pago"});
+            this.CBoxSituacaoBol.Location = new System.Drawing.Point(688, 381);
+            this.CBoxSituacaoBol.Name = "CBoxSituacaoBol";
+            this.CBoxSituacaoBol.Size = new System.Drawing.Size(182, 21);
+            this.CBoxSituacaoBol.TabIndex = 92;
+            // 
+            // lbSituacaoBol
+            // 
+            this.lbSituacaoBol.AutoSize = true;
+            this.lbSituacaoBol.BackColor = System.Drawing.Color.Transparent;
+            this.lbSituacaoBol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbSituacaoBol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSituacaoBol.Location = new System.Drawing.Point(583, 377);
+            this.lbSituacaoBol.Name = "lbSituacaoBol";
+            this.lbSituacaoBol.Size = new System.Drawing.Size(111, 25);
+            this.lbSituacaoBol.TabIndex = 91;
+            this.lbSituacaoBol.Text = "Situação:";
             // 
             // Boletos
             // 
@@ -337,11 +399,16 @@ namespace Projeto_Facul
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Facul.Properties.Resources.Fundo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 630);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.ClientSize = new System.Drawing.Size(913, 630);
+            this.Controls.Add(this.CBoxSituacaoBol);
+            this.Controls.Add(this.lbSituacaoBol);
+            this.Controls.Add(this.BtnPesqConBol);
+            this.Controls.Add(this.CboxNumDoc);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.CBoxIDCli);
+            this.Controls.Add(this.LbIDCliBol);
+            this.Controls.Add(this.MEDTDataVencimento);
             this.Controls.Add(this.lbDataVenc);
-            this.Controls.Add(this.lbDataEmi);
             this.Controls.Add(this.CBoxParcela);
             this.Controls.Add(this.lbParcela);
             this.Controls.Add(this.BtnPesqFatura);
@@ -400,8 +467,13 @@ namespace Projeto_Facul
         private System.Windows.Forms.ComboBox CBoxParcela;
         private System.Windows.Forms.Label lbParcela;
         private System.Windows.Forms.Label lbDataVenc;
-        private System.Windows.Forms.Label lbDataEmi;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox MEDTDataVencimento;
+        private System.Windows.Forms.ComboBox CBoxIDCli;
+        private System.Windows.Forms.Label LbIDCliBol;
+        private System.Windows.Forms.ComboBox CboxNumDoc;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BtnPesqConBol;
+        private System.Windows.Forms.ComboBox CBoxSituacaoBol;
+        private System.Windows.Forms.Label lbSituacaoBol;
     }
 }

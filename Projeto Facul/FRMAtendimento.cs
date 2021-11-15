@@ -69,10 +69,6 @@ namespace Projeto_Facul.Resources
             Program.cmd.Parameters.AddWithValue("cidade_ct", CBoxCidadeCon.Text.Trim());
             Program.cmd.Parameters.AddWithValue("complemento_endereco_ct", CBoxComplementoCon.Text.Trim());
      
-
-            
-
-
         }
 
 
@@ -90,10 +86,7 @@ namespace Projeto_Facul.Resources
             con = new NpgsqlConnection(consString);
 
             con.Open();
-            string queryCliCon = "Select * from contratos " +
-                "left join clientes on idcli = idcliente " +
-                "left join programacoes on idprog = idprogramacao" +
-                " where idcli = 1";
+            string queryCliCon = "Select * from clientes";
             NpgsqlDataAdapter daCliCon = new NpgsqlDataAdapter(queryCliCon, con);
             //NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
             DataTable dtCliCon = new DataTable();
@@ -104,37 +97,6 @@ namespace Projeto_Facul.Resources
 
             CBoxCliente.DisplayMember = "nome_cli";
             CBoxCliente.DataSource = dtCliCon;
-
-            CBoxIDCt.DisplayMember = "idcontrato";
-            CBoxIDCt.DataSource = dtCliCon;
-
-            CBoxTipoLogCon.DisplayMember = "tipo_logradouro_ct"; /* + "logradouro_cli" + "numero_residencia" +
-                "bairro_cli" + "cidade_cli" + "complemento_endereco_cli";*/
-            CBoxTipoLogCon.DataSource = dtCliCon;
-
-            CBoxLogradouroCon.DisplayMember = "logradouro_ct";
-            CBoxLogradouroCon.DataSource = dtCliCon;
-
-            CBoxNumeroCon.DisplayMember = "numero_residencia_ct";
-            CBoxNumeroCon.DataSource = dtCliCon;
-
-            CBoxBairroCon.DisplayMember = "bairro_cli_ct";
-            CBoxBairroCon.DataSource = dtCliCon;
-
-            CBoxCidadeCon.DisplayMember = "cidade_ct";
-            CBoxCidadeCon.DataSource = dtCliCon;
-
-            CBoxComplementoCon.DisplayMember = "complemento_endereco_ct";
-            CBoxComplementoCon.DataSource = dtCliCon;
-        
-            CBoxProg.DisplayMember = "nome_prog";
-            CBoxProg.DataSource = dtCliCon;
-
-            CBoxIDProg.DisplayMember = "idprog";
-            CBoxIDProg.DataSource = dtCliCon;
-
-            CBoxValorProgVenda.DisplayMember = "valor_prog";
-            CBoxValorProgVenda.DataSource = dtCliCon;
             con.Close();
 
             loadData("");
@@ -359,6 +321,61 @@ namespace Projeto_Facul.Resources
             Chamados _f10;
             _f10 = new Chamados();
             _f10.ShowDialog();
+            //Hide();
+        }
+
+        private void BtnPesqContratos_Click(object sender, EventArgs e)
+        {
+
+            string queryCon = "Select * from contratos " +
+                "left join clientes on idcli = idcliente " +
+                "left join programacoes on idprog = idprogramacao" +
+                " where idcli::Text = '" + CboxIDCli.Text + "'";
+            NpgsqlDataAdapter daCon = new NpgsqlDataAdapter(queryCon, con);
+            //NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
+            DataTable dtCon = new DataTable();
+            daCon.Fill(dtCon);
+
+            CBoxIDCt.DisplayMember = "idcontrato";
+            CBoxIDCt.DataSource = dtCon;
+
+            CBoxTipoLogCon.DisplayMember = "tipo_logradouro_ct"; /* + "logradouro_cli" + "numero_residencia" +
+                "bairro_cli" + "cidade_cli" + "complemento_endereco_cli";*/
+            CBoxTipoLogCon.DataSource = dtCon;
+
+            CBoxLogradouroCon.DisplayMember = "logradouro_ct";
+            CBoxLogradouroCon.DataSource = dtCon;
+
+            CBoxNumeroCon.DisplayMember = "numero_residencia_ct";
+            CBoxNumeroCon.DataSource = dtCon;
+
+            CBoxBairroCon.DisplayMember = "bairro_cli_ct";
+            CBoxBairroCon.DataSource = dtCon;
+
+            CBoxCidadeCon.DisplayMember = "cidade_ct";
+            CBoxCidadeCon.DataSource = dtCon;
+
+            CBoxComplementoCon.DisplayMember = "complemento_endereco_ct";
+            CBoxComplementoCon.DataSource = dtCon;
+
+            CBoxProg.DisplayMember = "nome_prog";
+            CBoxProg.DataSource = dtCon;
+
+            CBoxIDProg.DisplayMember = "idprog";
+            CBoxIDProg.DataSource = dtCon;
+
+            CBoxValorProgVenda.DisplayMember = "valor_prog";
+            CBoxValorProgVenda.DataSource = dtCon;
+            con.Close();
+            loadData("");
+
+        }
+
+        private void bunifuFBtnBoleto_Click(object sender, EventArgs e)
+        {
+            Boletos _f15;
+            _f15 = new Boletos();
+            _f15.ShowDialog();
             //Hide();
         }
     }

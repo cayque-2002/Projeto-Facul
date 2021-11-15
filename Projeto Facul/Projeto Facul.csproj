@@ -348,5 +348,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupas.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupas %281%29.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
