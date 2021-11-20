@@ -43,7 +43,7 @@ namespace Projeto_Facul
             CBoxContaCredito.Text = "";
             CBoxParcela.Text = "";
             CboxNumDoc.Text = "";
-            MEDTDataVencimento.Text = "";
+            CBoxDataVenc.Text = "";
 
         }
 
@@ -71,8 +71,8 @@ namespace Projeto_Facul
             Program.cmd.Parameters.AddWithValue("agencia", CBoxAgencia.Text.Trim());
             Program.cmd.Parameters.AddWithValue("conta_credito", CBoxContaCredito.Text.Trim());
             Program.cmd.Parameters.AddWithValue("num_parcela", (Convert.ToInt32(CBoxParcela.Text.Trim())));
-            Program.cmd.Parameters.AddWithValue("num_documento", CBoxParcela.Text.Trim());
-            Program.cmd.Parameters.AddWithValue("data_vencimento", (Convert.ToDateTime(MEDTDataVencimento.Text.Trim())));
+            Program.cmd.Parameters.AddWithValue("num_documento",CboxNumDoc.Text.Trim());
+            Program.cmd.Parameters.AddWithValue("data_vencimento", (Convert.ToDateTime(CBoxDataVenc.Text.Trim())));
             Program.cmd.Parameters.AddWithValue("situacao_bol", CBoxSituacaoBol.Text.Trim());
 
         }
@@ -133,13 +133,19 @@ namespace Projeto_Facul
                 MessageBox.Show("Por favor insira uma Conta Crédito", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            else if (string.IsNullOrEmpty(CboxNumDoc.Text.Trim()))
+            {
+                MessageBox.Show("Por favor insira o número da Parcela", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+
+            }
             else if (string.IsNullOrEmpty(CBoxParcela.Text.Trim()))
             {
                 MessageBox.Show("Por favor insira o número da Parcela", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
-            
+
             }
-            else if (string.IsNullOrEmpty(MEDTDataVencimento.Text.Trim()))
+            else if (string.IsNullOrEmpty(CBoxDataVenc.Text.Trim()))
             {
                 MessageBox.Show("Por favor insira uma Data de Vencimento", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -186,7 +192,7 @@ namespace Projeto_Facul
             //NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
             DataTable dtBoleto = new DataTable();
             daBoleto.Fill(dtBoleto);
-            //carregar os contratos de pertencentes ao cliente where id cliente =  talvez fazer o nome virar fk na tabela
+            
 
             CboxIDCtBol.DisplayMember = "idcontrato";
             CboxIDCtBol.DataSource = dtBoleto;
@@ -199,13 +205,19 @@ namespace Projeto_Facul
 
             CboxValorBol.DisplayMember = "valor_prog";
             CboxValorBol.DataSource = dtBoleto;
+
+            CBoxParcela.DisplayMember = "num_parcela";
+            CBoxParcela.DataSource = dtBoleto;
+
+            CBoxDataVenc.DisplayMember = "data_vencimento";
+            CBoxDataVenc.DataSource = dtBoleto;
             con.Close();
 
             loadData("");
 
         }
 
-        private void BtnBaixarFatura_Click(object sender, EventArgs e) //finalizar botão de baixa
+        private void BtnBaixarFatura_Click(object sender, EventArgs e) //f
         {
             if (string.IsNullOrEmpty(CboxIDCtBol.Text.Trim()))
             {
@@ -227,28 +239,14 @@ namespace Projeto_Facul
                 MessageBox.Show("Por favor insira um Valor", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            else if (string.IsNullOrEmpty(CBoxBanco.Text.Trim()))
-            {
-                MessageBox.Show("Por favor insira um Banco", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-            else if (string.IsNullOrEmpty(CBoxAgencia.Text.Trim()))
-            {
-                MessageBox.Show("Por favor insira uma Agência", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-            else if (string.IsNullOrEmpty(CBoxContaCredito.Text.Trim()))
-            {
-                MessageBox.Show("Por favor insira uma Conta Crédito", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
+            
             else if (string.IsNullOrEmpty(CBoxParcela.Text.Trim()))
             {
                 MessageBox.Show("Por favor insira o número da Parcela", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
 
             }
-            else if (string.IsNullOrEmpty(MEDTDataVencimento.Text.Trim()))
+            else if (string.IsNullOrEmpty(CBoxDataVenc.Text.Trim()))
             {
                 MessageBox.Show("Por favor insira uma Data de Vencimento", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -258,10 +256,53 @@ namespace Projeto_Facul
                 MessageBox.Show("Por favor insira uma Situação para o Boleto", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+
+                Program.sql = "update boletos set  data_vencimento = @data_vencimento, " +
+               "valor_documento = @valor_documento, situacao_bol = @situacao_bol " +
+               "where num_parcela::Text = '" + CBoxParcela.Text + "'";
+                
+
+                executa(Program.sql, "Update");
+
+                MessageBox.Show("Cadastro salvo.", "Insert Data : iBassukung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                loadData("");
+
+                resetMe();
+
+            }
+
+        private void BtnPesqFatura_Click(object sender, EventArgs e)
+        {
+
+            con = new NpgsqlConnection(consString);
+
+            con.Open();
+            string queryBoletoPesq = "Select cli.idcli, cli.nome_cli, ct.idcontrato, pr.nome_prog, ct.tipo_logradouro_ct, " +
+                "ct.logradouro_ct, ct.numero_residencia_ct, ct.bairro_cli_ct, ct.cidade_ct, bol.idboleto, bol.num_documento, " +
+                "bol.banco, bol.conta_credito, bol.agencia, bol.valor_documento, bol.data_emissao, bol.data_vencimento, bol.situacao_bol " +
+                "from contratos ct " +
+                "left join clientes cli on cli.idcli = ct.idcliente " +
+                "left join programacoes pr on pr.idprog = ct.idprogramacao " +
+                "left join boletos bol on bol.idcli_bol = ct.idcliente and bol.idprog_bol = ct.idprogramacao " +
+                "where idcli::Text = '" + CBoxIDCli.Text + "' and idcontrato::Text = '" + CboxIDCtBol.Text + "' and bol.idboleto is not null";
+            NpgsqlDataAdapter daBoletoPesq = new NpgsqlDataAdapter(queryBoletoPesq, con);
+            //NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
+            DataTable dtBoletoPesq = new DataTable();
+            
+            daBoletoPesq.Fill(dtBoletoPesq);
+
+            dataGVBoletos.DataSource = dtBoletoPesq;
+
+            con.Close();
+
         }
     }
+    }
 
-} 
+
+ 
 
 
   

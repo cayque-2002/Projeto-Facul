@@ -54,7 +54,6 @@ namespace Projeto_Facul
             this.CBoxParcela = new System.Windows.Forms.ComboBox();
             this.lbParcela = new System.Windows.Forms.Label();
             this.lbDataVenc = new System.Windows.Forms.Label();
-            this.MEDTDataVencimento = new System.Windows.Forms.MaskedTextBox();
             this.CBoxIDCli = new System.Windows.Forms.ComboBox();
             this.LbIDCliBol = new System.Windows.Forms.Label();
             this.CboxNumDoc = new System.Windows.Forms.ComboBox();
@@ -62,6 +61,7 @@ namespace Projeto_Facul
             this.BtnPesqConBol = new System.Windows.Forms.Button();
             this.CBoxSituacaoBol = new System.Windows.Forms.ComboBox();
             this.lbSituacaoBol = new System.Windows.Forms.Label();
+            this.CBoxDataVenc = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVBoletos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -277,6 +277,7 @@ namespace Projeto_Facul
             this.BtnPesqFatura.TabIndex = 78;
             this.BtnPesqFatura.Text = "Pesquisar Fatura";
             this.BtnPesqFatura.UseVisualStyleBackColor = true;
+            this.BtnPesqFatura.Click += new System.EventHandler(this.BtnPesqFatura_Click);
             // 
             // CBoxParcela
             // 
@@ -309,15 +310,6 @@ namespace Projeto_Facul
             this.lbDataVenc.Size = new System.Drawing.Size(198, 25);
             this.lbDataVenc.TabIndex = 83;
             this.lbDataVenc.Text = "Data Vencimento:";
-            // 
-            // MEDTDataVencimento
-            // 
-            this.MEDTDataVencimento.Location = new System.Drawing.Point(225, 386);
-            this.MEDTDataVencimento.Mask = "00/00/0000";
-            this.MEDTDataVencimento.Name = "MEDTDataVencimento";
-            this.MEDTDataVencimento.Size = new System.Drawing.Size(100, 20);
-            this.MEDTDataVencimento.TabIndex = 85;
-            this.MEDTDataVencimento.ValidatingType = typeof(System.DateTime);
             // 
             // CBoxIDCli
             // 
@@ -393,6 +385,14 @@ namespace Projeto_Facul
             this.lbSituacaoBol.TabIndex = 91;
             this.lbSituacaoBol.Text = "Situação:";
             // 
+            // CBoxDataVenc
+            // 
+            this.CBoxDataVenc.FormattingEnabled = true;
+            this.CBoxDataVenc.Location = new System.Drawing.Point(225, 383);
+            this.CBoxDataVenc.Name = "CBoxDataVenc";
+            this.CBoxDataVenc.Size = new System.Drawing.Size(154, 21);
+            this.CBoxDataVenc.TabIndex = 93;
+            // 
             // Boletos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,6 +400,7 @@ namespace Projeto_Facul
             this.BackgroundImage = global::Projeto_Facul.Properties.Resources.Fundo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(913, 630);
+            this.Controls.Add(this.CBoxDataVenc);
             this.Controls.Add(this.CBoxSituacaoBol);
             this.Controls.Add(this.lbSituacaoBol);
             this.Controls.Add(this.BtnPesqConBol);
@@ -407,7 +408,6 @@ namespace Projeto_Facul
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CBoxIDCli);
             this.Controls.Add(this.LbIDCliBol);
-            this.Controls.Add(this.MEDTDataVencimento);
             this.Controls.Add(this.lbDataVenc);
             this.Controls.Add(this.CBoxParcela);
             this.Controls.Add(this.lbParcela);
@@ -467,7 +467,6 @@ namespace Projeto_Facul
         private System.Windows.Forms.ComboBox CBoxParcela;
         private System.Windows.Forms.Label lbParcela;
         private System.Windows.Forms.Label lbDataVenc;
-        private System.Windows.Forms.MaskedTextBox MEDTDataVencimento;
         private System.Windows.Forms.ComboBox CBoxIDCli;
         private System.Windows.Forms.Label LbIDCliBol;
         private System.Windows.Forms.ComboBox CboxNumDoc;
@@ -475,5 +474,6 @@ namespace Projeto_Facul
         private System.Windows.Forms.Button BtnPesqConBol;
         private System.Windows.Forms.ComboBox CBoxSituacaoBol;
         private System.Windows.Forms.Label lbSituacaoBol;
+        private System.Windows.Forms.ComboBox CBoxDataVenc;
     }
 }
